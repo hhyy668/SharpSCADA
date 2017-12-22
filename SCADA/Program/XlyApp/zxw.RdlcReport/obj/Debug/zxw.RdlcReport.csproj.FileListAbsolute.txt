@@ -1,0 +1,7 @@
+D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.RdlcReport\bin\Debug\zxw.RdlcReport.dll
+D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.RdlcReport\bin\Debug\zxw.RdlcReport.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.RdlcReport\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.RdlcReport\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.RdlcReport\obj\Debug\zxw.RdlcReport.dll
+D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.RdlcReport\obj\Debug\zxw.RdlcReport.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.RdlcReport\obj\Debug\zxw.RdlcReport.csprojResolveAssemblyReference.cache

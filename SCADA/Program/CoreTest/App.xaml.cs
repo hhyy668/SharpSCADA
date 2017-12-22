@@ -13,8 +13,8 @@ namespace CoreTest
     /// </summary>
     public partial class App : System.Windows.Application
     {
-        const string MYCOSLOGSOURCE = "MyWEM Application";
-        const string MYCOSLOGNAME = "MyWEM";
+        const string MYCOSLOGSOURCE = "xly Application";
+        const string MYCOSLOGNAME = "xly";
 
         static EventLog Log = new EventLog(MYCOSLOGNAME);
         static readonly string machine = Environment.MachineName;
@@ -79,109 +79,111 @@ namespace CoreTest
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            MainWindow w1 = null, w2 = null, w3 = null, w4 = null;
-            Screen s1, s2, s3, s4;
-            Rectangle r1, r2, r3, r4;
+            //MainWindow w1 = null, w2 = null, w3 = null, w4 = null;
+            //Screen s1, s2, s3, s4;
+            //Rectangle r1, r2, r3, r4;
+            TagMonitor w1 = new TagMonitor();
+            w1.Show();
 
             Current.DispatcherUnhandledException += App_DispatcherUnhandledException;
             base.OnStartup(e);
 
-            #region
-            if (Screen.AllScreens.Length == 1)//Server.SD.ScreenCount
-            {
-                w1 = new MainWindow();
-                w1.WindowStartupLocation = WindowStartupLocation.Manual;
-                s1 = Screen.AllScreens[0];
-                r1 = s1.WorkingArea;
-                w1.Top = r1.Top;
-                w1.Left = r1.Left;
-                w1.Show();
-            }
-            else if (Screen.AllScreens.Length == 2)
-            {
-                w1 = new MainWindow();
-                w1.WindowStartupLocation = WindowStartupLocation.Manual;
-                s1 = Screen.AllScreens[0];
-                r1 = s1.WorkingArea;
-                w1.Top = r1.Top;
-                w1.Left = r1.Left;
-                w1.Show();
+            //#region
+            //if (Screen.AllScreens.Length == 1)//Server.SD.ScreenCount
+            //{
+            //    w1 = new MainWindow();
+            //    w1.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s1 = Screen.AllScreens[0];
+            //    r1 = s1.WorkingArea;
+            //    w1.Top = r1.Top;
+            //    w1.Left = r1.Left;
+            //    w1.Show();
+            //}
+            //else if (Screen.AllScreens.Length == 2)
+            //{
+            //    w1 = new MainWindow();
+            //    w1.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s1 = Screen.AllScreens[0];
+            //    r1 = s1.WorkingArea;
+            //    w1.Top = r1.Top;
+            //    w1.Left = r1.Left;
+            //    w1.Show();
 
-                w2 = new MainWindow();
-                w2.WindowStartupLocation = WindowStartupLocation.Manual;
-                s2 = Screen.AllScreens[1];
-                r2 = s2.WorkingArea;
-                w2.Top = r2.Top;
-                w2.Left = r2.Left;
-                w2.Show();
-                w2.Owner = w1;
-            }
-            else if (Screen.AllScreens.Length == 3)
-            {
-                w1 = new MainWindow();
-                w1.WindowStartupLocation = WindowStartupLocation.Manual;
-                s1 = Screen.AllScreens[0];
-                r1 = s1.WorkingArea;
-                w1.Top = r1.Top;
-                w1.Left = r1.Left;
-                w1.Show();
+            //    w2 = new MainWindow();
+            //    w2.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s2 = Screen.AllScreens[1];
+            //    r2 = s2.WorkingArea;
+            //    w2.Top = r2.Top;
+            //    w2.Left = r2.Left;
+            //    w2.Show();
+            //    w2.Owner = w1;
+            //}
+            //else if (Screen.AllScreens.Length == 3)
+            //{
+            //    w1 = new MainWindow();
+            //    w1.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s1 = Screen.AllScreens[0];
+            //    r1 = s1.WorkingArea;
+            //    w1.Top = r1.Top;
+            //    w1.Left = r1.Left;
+            //    w1.Show();
 
-                w2 = new MainWindow();
-                w2.WindowStartupLocation = WindowStartupLocation.Manual;
-                s2 = Screen.AllScreens[1];
-                r2 = s2.WorkingArea;
-                w2.Top = r2.Top;
-                w2.Left = r2.Left;
-                w2.Show();
-                w2.Owner = w1;
+            //    w2 = new MainWindow();
+            //    w2.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s2 = Screen.AllScreens[1];
+            //    r2 = s2.WorkingArea;
+            //    w2.Top = r2.Top;
+            //    w2.Left = r2.Left;
+            //    w2.Show();
+            //    w2.Owner = w1;
 
-                w3 = new MainWindow();
-                w3.WindowStartupLocation = WindowStartupLocation.Manual;
-                s3 = Screen.AllScreens[2];
-                r3 = s3.WorkingArea;
-                w3.Top = r3.Top;
-                w3.Left = r3.Left;
-                w3.Show();
-                w3.Owner = w1;
-            }
-            else if (Screen.AllScreens.Length == 4)
-            {
-                w1 = new MainWindow();
-                w1.WindowStartupLocation = WindowStartupLocation.Manual;
-                s1 = Screen.AllScreens[0];
-                r1 = s1.WorkingArea;
-                w1.Top = r1.Top;
-                w1.Left = r1.Left;
-                w1.Show();
+            //    w3 = new MainWindow();
+            //    w3.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s3 = Screen.AllScreens[2];
+            //    r3 = s3.WorkingArea;
+            //    w3.Top = r3.Top;
+            //    w3.Left = r3.Left;
+            //    w3.Show();
+            //    w3.Owner = w1;
+            //}
+            //else if (Screen.AllScreens.Length == 4)
+            //{
+            //    w1 = new MainWindow();
+            //    w1.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s1 = Screen.AllScreens[0];
+            //    r1 = s1.WorkingArea;
+            //    w1.Top = r1.Top;
+            //    w1.Left = r1.Left;
+            //    w1.Show();
 
-                w2 = new MainWindow();
-                w2.WindowStartupLocation = WindowStartupLocation.Manual;
-                s2 = Screen.AllScreens[1];
-                r2 = s2.WorkingArea;
-                w2.Top = r2.Top;
-                w2.Left = r2.Left;
-                w2.Show();
-                w2.Owner = w1;
+            //    w2 = new MainWindow();
+            //    w2.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s2 = Screen.AllScreens[1];
+            //    r2 = s2.WorkingArea;
+            //    w2.Top = r2.Top;
+            //    w2.Left = r2.Left;
+            //    w2.Show();
+            //    w2.Owner = w1;
 
-                w3 = new MainWindow();
-                w3.WindowStartupLocation = WindowStartupLocation.Manual;
-                s3 = Screen.AllScreens[2];
-                r3 = s3.WorkingArea;
-                w3.Top = r3.Top;
-                w3.Left = r3.Left;
-                w3.Show();
-                w3.Owner = w1;
+            //    w3 = new MainWindow();
+            //    w3.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s3 = Screen.AllScreens[2];
+            //    r3 = s3.WorkingArea;
+            //    w3.Top = r3.Top;
+            //    w3.Left = r3.Left;
+            //    w3.Show();
+            //    w3.Owner = w1;
 
-                w4 = new MainWindow();
-                w4.WindowStartupLocation = WindowStartupLocation.Manual;
-                s4 = Screen.AllScreens[3];
-                r4 = s3.WorkingArea;
-                w4.Top = r4.Top;
-                w4.Left = r4.Left;
-                w4.Show();
-                w4.Owner = w1;
-            }
-            #endregion
+            //    w4 = new MainWindow();
+            //    w4.WindowStartupLocation = WindowStartupLocation.Manual;
+            //    s4 = Screen.AllScreens[3];
+            //    r4 = s3.WorkingArea;
+            //    w4.Top = r4.Top;
+            //    w4.Left = r4.Left;
+            //    w4.Show();
+            //    w4.Owner = w1;
+            //}
+            //#endregion
         }
 
         protected override void OnExit(ExitEventArgs e)

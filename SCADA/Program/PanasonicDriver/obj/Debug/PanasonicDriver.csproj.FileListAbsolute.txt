@@ -1,0 +1,7 @@
+D:\项目软件\XLYSCADA\SCADA\Program\PanasonicDriver\bin\Debug\PanasonicDriver.dll
+D:\项目软件\XLYSCADA\SCADA\Program\PanasonicDriver\bin\Debug\PanasonicDriver.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\PanasonicDriver\bin\Debug\DataService.dll
+D:\项目软件\XLYSCADA\SCADA\Program\PanasonicDriver\bin\Debug\DataService.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\PanasonicDriver\obj\Debug\PanasonicDriver.dll
+D:\项目软件\XLYSCADA\SCADA\Program\PanasonicDriver\obj\Debug\PanasonicDriver.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\PanasonicDriver\obj\Debug\PanasonicDriver.csprojResolveAssemblyReference.cache

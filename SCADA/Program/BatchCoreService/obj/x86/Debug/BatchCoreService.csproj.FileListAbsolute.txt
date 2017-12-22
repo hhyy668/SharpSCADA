@@ -1,0 +1,17 @@
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\App.config
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\BatchCoreService.exe.config
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\BatchCoreService.exe
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\BatchCoreService.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\ClientDriver.dll
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\DataHelper.dll
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\DataService.dll
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\MySql.Data.dll
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\ClientDriver.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\DataHelper.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\bin\Debug\DataService.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\obj\x86\Debug\BatchCoreService.csprojResolveAssemblyReference.cache
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\obj\x86\Debug\BatchCoreService.BatchCoreService.resources
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\obj\x86\Debug\BatchCoreService.ProjectInstaller.resources
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\obj\x86\Debug\BatchCoreService.csproj.GenerateResource.Cache
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\obj\x86\Debug\BatchCoreService.exe
+D:\项目软件\XLYSCADA\SCADA\Program\BatchCoreService\obj\x86\Debug\BatchCoreService.pdb

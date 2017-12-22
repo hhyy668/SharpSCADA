@@ -1,0 +1,9 @@
+D:\项目软件\XLYSCADA\SCADA\Program\OPCDriver\bin\Debug\OPCDriver.dll
+D:\项目软件\XLYSCADA\SCADA\Program\OPCDriver\bin\Debug\OPCDriver.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\OPCDriver\bin\Debug\DataService.dll
+D:\项目软件\XLYSCADA\SCADA\Program\OPCDriver\bin\Debug\OPCLib.dll
+D:\项目软件\XLYSCADA\SCADA\Program\OPCDriver\bin\Debug\DataService.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\OPCDriver\bin\Debug\OPCLib.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\OPCDriver\obj\Debug\OPCDriver.csprojResolveAssemblyReference.cache
+D:\项目软件\XLYSCADA\SCADA\Program\OPCDriver\obj\Debug\OPCDriver.dll
+D:\项目软件\XLYSCADA\SCADA\Program\OPCDriver\obj\Debug\OPCDriver.pdb
