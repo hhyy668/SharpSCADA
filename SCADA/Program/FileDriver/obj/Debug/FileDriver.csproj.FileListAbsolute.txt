@@ -1,7 +1,0 @@
-D:\项目软件\XLYSCADA\SCADA\Program\FileDriver\bin\Debug\FileDriver.dll
-D:\项目软件\XLYSCADA\SCADA\Program\FileDriver\bin\Debug\FileDriver.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\FileDriver\bin\Debug\DataService.dll
-D:\项目软件\XLYSCADA\SCADA\Program\FileDriver\bin\Debug\DataService.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\FileDriver\obj\Debug\FileDriver.csprojResolveAssemblyReference.cache
-D:\项目软件\XLYSCADA\SCADA\Program\FileDriver\obj\Debug\FileDriver.dll
-D:\项目软件\XLYSCADA\SCADA\Program\FileDriver\obj\Debug\FileDriver.pdb

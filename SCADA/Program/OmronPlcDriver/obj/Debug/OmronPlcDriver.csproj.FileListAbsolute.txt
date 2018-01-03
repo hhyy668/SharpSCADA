@@ -1,6 +1,0 @@
-D:\项目软件\XLYSCADA\SCADA\Program\OmronPlcDriver\bin\Debug\OmronPlcDriver.dll
-D:\项目软件\XLYSCADA\SCADA\Program\OmronPlcDriver\bin\Debug\OmronPlcDriver.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\OmronPlcDriver\bin\Debug\DataService.dll
-D:\项目软件\XLYSCADA\SCADA\Program\OmronPlcDriver\bin\Debug\DataService.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\OmronPlcDriver\obj\Debug\OmronPlcDriver.dll
-D:\项目软件\XLYSCADA\SCADA\Program\OmronPlcDriver\obj\Debug\OmronPlcDriver.pdb

@@ -1,8 +1,12 @@
-﻿using Easy4net.CustomAttributes;
+﻿
+
+
+using Easy4net.CustomAttributes;
 using System;
 using System.Linq;
 namespace Easy4net.Entity
 {
+	
 	[Table(Name = "ProcessSteps")] 
 	public class ProcessSteps
 	{    
@@ -55,6 +59,8 @@ namespace Easy4net.Entity
 		/// 工位主键
         /// </summary>		
 		[Column(Name = "StationID")]
-        public int StationID { get; set;}       		  
+        public int StationID { get; set;}       
+		
+   
 	}
 }

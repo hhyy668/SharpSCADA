@@ -7,34 +7,39 @@ using System.Linq;
 namespace Easy4net.Entity
 {
 	
-	[Table(Name = "ProductionOder")] 
-	public class ProductionOder
+	[Table(Name = "Racks")] 
+	public class Racks
 	{    
       	/// <summary>
-		/// 生产单主键
+		/// 挂具主键
         /// </summary>		
-        [Id(Name = "ProductionOderID", Strategy = GenerationType.INDENTITY)]
-        public int ProductionOderID { get; set;}       
+        [Id(Name = "RacksID", Strategy = GenerationType.INDENTITY)]
+        public int RacksID { get; set;}       
 		/// <summary>
-		/// 生产单号
+		/// 挂具名称
         /// </summary>		
-		[Column(Name = "ProductionOderCode")]
-        public string ProductionOderCode { get; set;}       
+		[Column(Name = "RacksName")]
+        public string RacksName { get; set;}       
 		/// <summary>
-		/// 客户名称
+		/// 挂具类型
         /// </summary>		
-		[Column(Name = "CustomerName")]
-        public string CustomerName { get; set;}       
+		[Column(Name = "RacksType")]
+        public int RacksType { get; set;}       
 		/// <summary>
-		/// 物料类型
+		/// 挂具状态
         /// </summary>		
-		[Column(Name = "MaterielID")]
-        public string MaterielID { get; set;}       
+		[Column(Name = "RacksStatus")]
+        public int RacksStatus { get; set;}       
 		/// <summary>
-		/// 数量
+		/// 所属任务编号
         /// </summary>		
-		[Column(Name = "Number")]
-        public decimal Number { get; set;}       
+		[Column(Name = "JobOrderID")]
+        public int JobOrderID { get; set;}       
+		/// <summary>
+		/// 使用时间
+        /// </summary>		
+		[Column(Name = "UseTime")]
+        public DateTime UseTime { get; set;}       
 		/// <summary>
 		/// 创建时间
         /// </summary>		

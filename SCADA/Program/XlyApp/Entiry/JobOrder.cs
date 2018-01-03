@@ -1,14 +1,18 @@
-﻿using Easy4net.CustomAttributes;
+﻿
+
+
+using Easy4net.CustomAttributes;
 using System;
 using System.Linq;
 namespace Easy4net.Entity
 {
+	
 	[Table(Name = "JobOrder")] 
 	public class JobOrder
 	{    
       	/// <summary>
 		/// 任务单主键
-        /// </summary>	
+        /// </summary>		
         [Id(Name = "JobOrderID", Strategy = GenerationType.INDENTITY)]
         public int JobOrderID { get; set;}       
 		/// <summary>
@@ -61,5 +65,7 @@ namespace Easy4net.Entity
         /// </summary>		
 		[Column(Name = "ModifyUser")]
         public string ModifyUser { get; set;}       
+		
+   
 	}
 }

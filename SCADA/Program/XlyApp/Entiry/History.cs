@@ -6,11 +6,11 @@ namespace Easy4net.Entity
 	
 	[Table(Name = "History")] 
 	public class History
-	{    
-      	/// <summary>
-		/// ID
+	{
+        /// <summary>
+        /// ID
         /// </summary>		
-		[Column(Name = "ID")]
+        [Id(Name = "ID", Strategy = GenerationType.INDENTITY)]
         public long ID { get; set;}       
 		/// <summary>
 		/// 批次

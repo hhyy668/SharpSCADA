@@ -10,7 +10,7 @@ namespace Easy4net.Entity
       	/// <summary>
 		/// 操作内容
         /// </summary>		
-		[Column(Name = "OptionID")]
+        [Id(Name = "OptionID", Strategy = GenerationType.INDENTITY)]
         public long OptionID { get; set;}       
 		/// <summary>
 		/// 操作时间

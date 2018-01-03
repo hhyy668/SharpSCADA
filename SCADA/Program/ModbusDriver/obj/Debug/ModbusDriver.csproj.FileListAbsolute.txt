@@ -1,6 +1,0 @@
-D:\项目软件\XLYSCADA\SCADA\Program\ModbusDriver\bin\Debug\ModbusDriver.dll
-D:\项目软件\XLYSCADA\SCADA\Program\ModbusDriver\bin\Debug\ModbusDriver.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\ModbusDriver\bin\Debug\DataService.dll
-D:\项目软件\XLYSCADA\SCADA\Program\ModbusDriver\bin\Debug\DataService.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\ModbusDriver\obj\Debug\ModbusDriver.dll
-D:\项目软件\XLYSCADA\SCADA\Program\ModbusDriver\obj\Debug\ModbusDriver.pdb

@@ -1,8 +1,12 @@
-﻿using Easy4net.CustomAttributes;
+﻿
+
+
+using Easy4net.CustomAttributes;
 using System;
 using System.Linq;
 namespace Easy4net.Entity
 {
+	
 	[Table(Name = "Pool")] 
 	public class Pool
 	{    
@@ -20,6 +24,8 @@ namespace Easy4net.Entity
 		/// 池类型
         /// </summary>		
 		[Column(Name = "PoolType")]
-        public string PoolType { get; set;}  
+        public string PoolType { get; set;}       
+		
+   
 	}
 }

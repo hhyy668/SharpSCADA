@@ -1,8 +1,12 @@
-﻿using Easy4net.CustomAttributes;
+﻿
+
+
+using Easy4net.CustomAttributes;
 using System;
 using System.Linq;
 namespace Easy4net.Entity
-{	
+{
+	
 	[Table(Name = "Station")] 
 	public class Station
 	{    
@@ -25,6 +29,8 @@ namespace Easy4net.Entity
 		/// 工位状态（1-空闲，2-使用中）
         /// </summary>		
 		[Column(Name = "StationStatus")]
-        public int StationStatus { get; set;}	  
+        public int StationStatus { get; set;}       
+		
+   
 	}
 }

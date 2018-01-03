@@ -1,8 +1,0 @@
-D:\项目软件\XLYSCADA\SCADA\Program\SiemensPLCDriver\bin\Debug\SiemensPLCDriver.dll
-D:\项目软件\XLYSCADA\SCADA\Program\SiemensPLCDriver\bin\Debug\SiemensPLCDriver.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\SiemensPLCDriver\bin\Debug\DataService.dll
-D:\项目软件\XLYSCADA\SCADA\Program\SiemensPLCDriver\bin\Debug\libnodave.net.dll
-D:\项目软件\XLYSCADA\SCADA\Program\SiemensPLCDriver\bin\Debug\DataService.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\SiemensPLCDriver\obj\Debug\SiemensPLCDriver.csprojResolveAssemblyReference.cache
-D:\项目软件\XLYSCADA\SCADA\Program\SiemensPLCDriver\obj\Debug\SiemensPLCDriver.dll
-D:\项目软件\XLYSCADA\SCADA\Program\SiemensPLCDriver\obj\Debug\SiemensPLCDriver.pdb

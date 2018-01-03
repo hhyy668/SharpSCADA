@@ -44,26 +44,35 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BridgeCrane.cs" />
+    <Compile Include="EDepartment.cs" />
+    <Compile Include="EFile.cs" />
+    <Compile Include="ENotice.cs" />
     <Compile Include="Enumeration\ArticleEnum.cs" />
-    <Compile Include="Enumeration\DetectDataEnum.cs" />
-    <Compile Include="Enumeration\DetectNetEnum.cs" />
-    <Compile Include="Enumeration\DetectStationEnum.cs" />
     <Compile Include="Enumeration\FileEnum.cs" />
     <Compile Include="Enumeration\MobileEnum.cs" />
     <Compile Include="Enumeration\NewsEnum.cs" />
     <Compile Include="Enumeration\PermissionEnum.cs" />
     <Compile Include="Enumeration\SystemEnum.cs" />
+    <Compile Include="EPermission.cs" />
+    <Compile Include="EPermissionDistribution.cs" />
+    <Compile Include="EReport.cs" />
+    <Compile Include="ERole.cs" />
+    <Compile Include="EUser.cs" />
+    <Compile Include="EUser_Role.cs" />
     <Compile Include="ExModel\EmailModel.cs" />
     <Compile Include="ExModel\LoginModel.cs" />
     <Compile Include="ExModel\SMSModel.cs" />
     <Compile Include="ExModel\UserInfo.cs" />
     <Compile Include="History.cs" />
     <Compile Include="JobOrder.cs" />
+    <Compile Include="Materiel.cs" />
     <Compile Include="OptionLogs.cs" />
     <Compile Include="Pool.cs" />
+    <Compile Include="ProcessRoute.cs" />
     <Compile Include="ProcessSteps.cs" />
     <Compile Include="ProductionOder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Racks.cs" />
     <Compile Include="Station.cs" />
   </ItemGroup>
   <ItemGroup>

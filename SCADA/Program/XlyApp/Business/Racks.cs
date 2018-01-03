@@ -10,12 +10,12 @@ using Easy4net.Utility;
 namespace Business
 {
 	
- 	//池信息
+ 	//挂具
 	
-	public partial class PoolBLL
+	public partial class RacksBLL
 	{
 		 Easy4net.DBUtility.DBHelper dbhelper = Easy4net.DBUtility.DBHelper.getInstance("SqlServerString");
-		public PoolBLL()
+		public RacksBLL()
 		{}
 		
 		#region  Method
@@ -24,15 +24,15 @@ namespace Business
         /// </summary>
         ///public int GetMaxId()
         ///{
-        ///    Pool model = dbhelper.FindOne<Pool>("select top 1 * from Pool order by PoolID DESC");
-        ///    return model.PoolID + 1;
+        ///    Racks model = dbhelper.FindOne<Racks>("select top 1 * from Racks order by RacksID DESC");
+        ///    return model.RacksID + 1;
         ///}
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
-		public bool Exists(int PoolID)
+		public bool Exists(int RacksID)
 		{
-			Pool model = dbhelper.Get<Pool>(PoolID);
+			Racks model = dbhelper.Get<Racks>(RacksID);
 			 if (model != null)
             {
                 return true;
@@ -43,25 +43,25 @@ namespace Business
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>
-		public bool  Add(Pool model)
+		public bool  Add(Racks model)
 		{
-			return dbhelper.Save<Pool>(model)>0;		
+			return dbhelper.Save<Racks>(model)>0;		
 		}
 
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
-		public bool Update(Pool model)
+		public bool Update(Racks model)
 		{
-			return dbhelper.Update<Pool>(model) > 0;
+			return dbhelper.Update<Racks>(model) > 0;
 		}
 
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(int PoolID)
+		public bool Delete(int RacksID)
 		{
-			 return dbhelper.Remove<Pool>(PoolID)>0;
+			 return dbhelper.Remove<Racks>(RacksID)>0;
 		}
 		
 		/// <summary>
@@ -69,7 +69,7 @@ namespace Business
 		/// </summary>
 		public bool DeleteList(string list )
 		{
-			return dbhelper.Remove<Pool>(list) > 0;
+			return dbhelper.Remove<Racks>(list) > 0;
 		}
 		
 		/// <summary>
@@ -77,29 +77,29 @@ namespace Business
         /// </summary>
         public bool Delete(object[] ids)
         {
-            return dbhelper.Remove<Pool>(ids) > 0;
+            return dbhelper.Remove<Racks>(ids) > 0;
         }
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public Pool GetModel(int PoolID)
+		public Racks GetModel(int RacksID)
 		{
-			  return dbhelper.Get<Pool>(PoolID);
+			  return dbhelper.Get<Racks>(RacksID);
 		}
 
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public Pool GetModelByCache(int PoolID)
+		public Racks GetModelByCache(int RacksID)
 		{
 			
-			string CacheKey = "PoolModel-" + PoolID;
+			string CacheKey = "RacksModel-" + RacksID;
 			object objModel = DataCache.GetCache(CacheKey);
 			if (objModel == null)
 			{
 				try
 				{
-				 	objModel = dbhelper.Get<Pool>(PoolID); 
+				 	objModel = dbhelper.Get<Racks>(RacksID); 
 					if (objModel != null)
 					{
 						int ModelCache =ConfigHelper.GetConfigInt("ModelCache");
@@ -108,31 +108,31 @@ namespace Business
 				}
 				catch{}
 			}
-			return (Pool)objModel;
+			return (Racks)objModel;
 		}
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
-		public List<Pool> GetModelList(string strWhere)
+		public List<Racks> GetModelList(string strWhere)
 		{
-			return dbhelper.FindBySql<Pool>(string.Format("select * from Pool where {0}",  strWhere.IsNullOrEmpty() ? "1=1" : strWhere));
+			return dbhelper.FindBySql<Racks>(string.Format("select * from Racks where {0}",  strWhere.IsNullOrEmpty() ? "1=1" : strWhere));
 		}	
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
 		public int GetRecordCount(string strWhere)
 		{
-            return dbhelper.Count(string.Format("select count(*) from Pool where {0}",  strWhere.IsNullOrEmpty() ? "1=1" : strWhere));
+            return dbhelper.Count(string.Format("select count(*) from Racks where {0}",  strWhere.IsNullOrEmpty() ? "1=1" : strWhere));
 		}
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
-        public PageResult<Pool> GetListByPage(string strWhere = "", int page = 1, int pagesize = 30, string orderby = "PoolID")
+        public PageResult<Racks> GetListByPage(string strWhere = "", int page = 1, int pagesize = 30, string orderby = "RacksID")
 		{
             ParamMap param = ParamMap.newMap();
             param.setPageParamters(page, pagesize);
             param.setOrderFields(orderby, true);
-            PageResult<Pool> pr = dbhelper.FindPage<Pool>(string.Format("select * from Pool where {0}", strWhere.IsNullOrEmpty() ? "1=1" : strWhere), param);
+            PageResult<Racks> pr = dbhelper.FindPage<Racks>(string.Format("select * from Racks where {0}", strWhere.IsNullOrEmpty() ? "1=1" : strWhere), param);
             pr.page = page;
             pr.pagesize = pagesize;
             return pr;

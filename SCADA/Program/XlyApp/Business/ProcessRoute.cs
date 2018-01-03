@@ -10,12 +10,12 @@ using Easy4net.Utility;
 namespace Business
 {
 	
- 	//池信息
+ 	//工艺路线
 	
-	public partial class PoolBLL
+	public partial class ProcessRouteBLL
 	{
 		 Easy4net.DBUtility.DBHelper dbhelper = Easy4net.DBUtility.DBHelper.getInstance("SqlServerString");
-		public PoolBLL()
+		public ProcessRouteBLL()
 		{}
 		
 		#region  Method
@@ -24,15 +24,15 @@ namespace Business
         /// </summary>
         ///public int GetMaxId()
         ///{
-        ///    Pool model = dbhelper.FindOne<Pool>("select top 1 * from Pool order by PoolID DESC");
-        ///    return model.PoolID + 1;
+        ///    ProcessRoute model = dbhelper.FindOne<ProcessRoute>("select top 1 * from ProcessRoute order by ProcessRouteID DESC");
+        ///    return model.ProcessRouteID + 1;
         ///}
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
-		public bool Exists(int PoolID)
+		public bool Exists(int ProcessRouteID)
 		{
-			Pool model = dbhelper.Get<Pool>(PoolID);
+			ProcessRoute model = dbhelper.Get<ProcessRoute>(ProcessRouteID);
 			 if (model != null)
             {
                 return true;
@@ -43,25 +43,25 @@ namespace Business
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>
-		public bool  Add(Pool model)
+		public bool  Add(ProcessRoute model)
 		{
-			return dbhelper.Save<Pool>(model)>0;		
+			return dbhelper.Save<ProcessRoute>(model)>0;		
 		}
 
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
-		public bool Update(Pool model)
+		public bool Update(ProcessRoute model)
 		{
-			return dbhelper.Update<Pool>(model) > 0;
+			return dbhelper.Update<ProcessRoute>(model) > 0;
 		}
 
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(int PoolID)
+		public bool Delete(int ProcessRouteID)
 		{
-			 return dbhelper.Remove<Pool>(PoolID)>0;
+			 return dbhelper.Remove<ProcessRoute>(ProcessRouteID)>0;
 		}
 		
 		/// <summary>
@@ -69,7 +69,7 @@ namespace Business
 		/// </summary>
 		public bool DeleteList(string list )
 		{
-			return dbhelper.Remove<Pool>(list) > 0;
+			return dbhelper.Remove<ProcessRoute>(list) > 0;
 		}
 		
 		/// <summary>
@@ -77,29 +77,29 @@ namespace Business
         /// </summary>
         public bool Delete(object[] ids)
         {
-            return dbhelper.Remove<Pool>(ids) > 0;
+            return dbhelper.Remove<ProcessRoute>(ids) > 0;
         }
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public Pool GetModel(int PoolID)
+		public ProcessRoute GetModel(int ProcessRouteID)
 		{
-			  return dbhelper.Get<Pool>(PoolID);
+			  return dbhelper.Get<ProcessRoute>(ProcessRouteID);
 		}
 
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public Pool GetModelByCache(int PoolID)
+		public ProcessRoute GetModelByCache(int ProcessRouteID)
 		{
 			
-			string CacheKey = "PoolModel-" + PoolID;
+			string CacheKey = "ProcessRouteModel-" + ProcessRouteID;
 			object objModel = DataCache.GetCache(CacheKey);
 			if (objModel == null)
 			{
 				try
 				{
-				 	objModel = dbhelper.Get<Pool>(PoolID); 
+				 	objModel = dbhelper.Get<ProcessRoute>(ProcessRouteID); 
 					if (objModel != null)
 					{
 						int ModelCache =ConfigHelper.GetConfigInt("ModelCache");
@@ -108,31 +108,31 @@ namespace Business
 				}
 				catch{}
 			}
-			return (Pool)objModel;
+			return (ProcessRoute)objModel;
 		}
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
-		public List<Pool> GetModelList(string strWhere)
+		public List<ProcessRoute> GetModelList(string strWhere)
 		{
-			return dbhelper.FindBySql<Pool>(string.Format("select * from Pool where {0}",  strWhere.IsNullOrEmpty() ? "1=1" : strWhere));
+			return dbhelper.FindBySql<ProcessRoute>(string.Format("select * from ProcessRoute where {0}",  strWhere.IsNullOrEmpty() ? "1=1" : strWhere));
 		}	
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
 		public int GetRecordCount(string strWhere)
 		{
-            return dbhelper.Count(string.Format("select count(*) from Pool where {0}",  strWhere.IsNullOrEmpty() ? "1=1" : strWhere));
+            return dbhelper.Count(string.Format("select count(*) from ProcessRoute where {0}",  strWhere.IsNullOrEmpty() ? "1=1" : strWhere));
 		}
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
-        public PageResult<Pool> GetListByPage(string strWhere = "", int page = 1, int pagesize = 30, string orderby = "PoolID")
+        public PageResult<ProcessRoute> GetListByPage(string strWhere = "", int page = 1, int pagesize = 30, string orderby = "ProcessRouteID")
 		{
             ParamMap param = ParamMap.newMap();
             param.setPageParamters(page, pagesize);
             param.setOrderFields(orderby, true);
-            PageResult<Pool> pr = dbhelper.FindPage<Pool>(string.Format("select * from Pool where {0}", strWhere.IsNullOrEmpty() ? "1=1" : strWhere), param);
+            PageResult<ProcessRoute> pr = dbhelper.FindPage<ProcessRoute>(string.Format("select * from ProcessRoute where {0}", strWhere.IsNullOrEmpty() ? "1=1" : strWhere), param);
             pr.page = page;
             pr.pagesize = pagesize;
             return pr;
