@@ -58,6 +58,7 @@ namespace CoreTest
                     Environment.Exit(0);
                 }
             }
+            Easy4net.Context.Session session = Easy4net.Context.SessionFactory.GetSession("SqlServerString");//SQLiteString此处指定程序默
             if (!EventLog.SourceExists(MYCOSLOGSOURCE))
                 EventLog.CreateEventSource(MYCOSLOGSOURCE, MYCOSLOGNAME);
         }
@@ -82,7 +83,9 @@ namespace CoreTest
             //MainWindow w1 = null, w2 = null, w3 = null, w4 = null;
             //Screen s1, s2, s3, s4;
             //Rectangle r1, r2, r3, r4;
-            TagMonitor w1 = new TagMonitor();
+            //MainWindow w1 = new MainWindow();
+            //w1.Show();
+            Index w1 = new Index();
             w1.Show();
 
             Current.DispatcherUnhandledException += App_DispatcherUnhandledException;
