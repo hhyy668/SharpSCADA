@@ -2,6 +2,7 @@ D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\bin\Debug\HMIControl.dll
 D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\bin\Debug\HMIControl.pdb
 D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\bin\Debug\Microsoft.Expression.Controls.dll
 D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\bin\Debug\Microsoft.Expression.Drawing.dll
+D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\obj\Debug\HMIControl.csprojResolveAssemblyReference.cache
 D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\obj\Debug\HMIControl_MarkupCompile.cache
 D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\obj\Debug\HMIControl_MarkupCompile.lref
@@ -11,4 +12,3 @@ D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\obj\Debug\HMIControl.Propertie
 D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\obj\Debug\HMIControl.csproj.GenerateResource.Cache
 D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\obj\Debug\HMIControl.dll
 D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\obj\Debug\HMIControl.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\HMIControl\obj\Debug\HMIControl.csprojResolveAssemblyReference.cache

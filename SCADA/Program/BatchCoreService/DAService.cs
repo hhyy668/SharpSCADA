@@ -206,6 +206,7 @@ namespace BatchCoreService
 
         public DAService()
         {
+            Console.Write("启动服务端守护程序，端口：6543\n");
             if (!EventLog.SourceExists(SERVICELOGSOURCE))
             {
                 EventLog.CreateEventSource(SERVICELOGSOURCE, SERVICELOGNAME);
@@ -225,7 +226,9 @@ namespace BatchCoreService
             _alarmList = new List<AlarmItem>(ALARMLIMIT + 10);
             reval = new ExpressionEval(this);
             _hda = new List<HistoryData>();
+            Console.Write("根据数据库初始化服务器\n");
             InitServerByDatabase();
+            Console.Write("初始化连接\n");
             InitConnection();
             _socketThreadList = new Dictionary<IPAddress, Socket>();
             InitHost();
@@ -311,6 +314,7 @@ namespace BatchCoreService
 
         private void timer1_Elapsed(object sender, ElapsedEventArgs e)
         {
+            Console.Write("循环判断驱动连接是否断开，如断开这重连\n");
             foreach (IDriver d in Drivers)
             {
                 if (d.IsClosed)
@@ -322,6 +326,7 @@ namespace BatchCoreService
 
         private void timer2_Elapsed(object sender, ElapsedEventArgs e)
         {
+            Console.Write("判断是否达到延迟的时间,保存缓存数据\n");
             if (HDADELAY > 0 && _hda.Count > 0 && (DateTime.Now - _hdastart).TotalMilliseconds > HDADELAY)
             {
                 lock (_hdaRoot)
@@ -397,6 +402,7 @@ namespace BatchCoreService
         {
             foreach (IDriver reader in _drivers.Values)
             {
+                Console.Write("驱动:"+ reader.Name+"--"+reader.ServerName+"\n");
                 reader.OnClose += new ShutdownRequestEventHandler(reader_OnClose);
                 if (reader.IsClosed)
                 {
@@ -405,6 +411,7 @@ namespace BatchCoreService
                 }
                 foreach (IGroup grp in reader.Groups)
                 {
+                    Console.Write("组名称:"+grp.Name+ "增加DataChange事件\n");
                     grp.DataChange += new DataChangeEventHandler(grp_DataChange);
                     //可在此加入判断，如为ClientDriver发出，则变化数据毋须广播，只需归档。
                     grp.IsActive = grp.IsActive;
@@ -558,6 +565,7 @@ namespace BatchCoreService
 
         void InitHost()
         {
+            Console.Write("初始化服务器主机\n");
             /*对关闭状态的判断，最好用心跳检测；冗余切换，可广播冗余命令，包含新主机名、数据库连接、IP地址等。
              * 服务启动时，向整个局域网UDP广播加密的主机名、连接字符串等信息
              */
@@ -681,6 +689,7 @@ namespace BatchCoreService
                     、终止、启动）；可返回客户端一个可行的路径设备链、ERP交换数据指令（包含DATASET)，冗余切换指令等）
                      */
                     int ReceiveCount = s_Receive.Receive(buffer);
+                    Console.WriteLine("服务器收到（"+ ReceiveCount + "）:" + BitConverter.ToString(buffer, 0).ToUpper() + "\n");
 
                     if (buffer[0] == FCTCOMMAND.fctHead)
                     {
@@ -1225,6 +1234,7 @@ namespace BatchCoreService
 
         public void SaveCachedData(object stateInfo)
         {
+            Console.Write("保存缓存数据\n");
             var tempData = (HistoryData[])stateInfo;
             if (tempData.Length == 0) return;
             DateTime startTime = tempData[0].TimeStamp;
@@ -1345,6 +1355,7 @@ namespace BatchCoreService
 
         void grp_DataChange(object sender, DataChangeEventArgs e)
         {
+            Console.Write("改变值:" + e.Values+ "\n");
             var data = e.Values;
             var now = DateTime.Now;
             if (_hasHda)
@@ -1501,13 +1512,21 @@ namespace BatchCoreService
             IDriver dv = null;
             try
             {
-                Assembly ass = Assembly.LoadFrom(assembly);
-                var dvType = ass.GetType(className);
-                if (dvType != null)
+                if (className == "ModbusDriver.ModbusTCPReader")
                 {
-                    dv = Activator.CreateInstance(dvType, new object[] { this, id, name, server, timeOut, spare1, spare2 }) as IDriver;
-                    if (dv != null)
-                        _drivers.Add(id, dv);
+                    dv = new ModbusDriver.ModbusTCPReader(this, id, name, server, timeOut, spare1, spare2);
+                    _drivers.Add(id, dv);
+                }
+                else
+                {
+                    Assembly ass = Assembly.LoadFrom(assembly);
+                    var dvType = ass.GetType(className);
+                    if (dvType != null)
+                    {
+                        dv = Activator.CreateInstance(dvType, new object[] { this, id, name, server, timeOut, spare1, spare2 }) as IDriver;
+                        if (dv != null)
+                            _drivers.Add(id, dv);
+                    }
                 }
             }
             catch (Exception e)
@@ -1721,6 +1740,7 @@ namespace BatchCoreService
 
         private bool SaveAlarm()
         {
+            Console.Write("保存报警数据\n");
             if (_alarmList.Count == 0) return true;
             if (DataHelper.Instance.BulkCopy(new AlarmDataReader(_alarmList), "Log_Alarm", null, SqlBulkCopyOptions.KeepIdentity))
             {

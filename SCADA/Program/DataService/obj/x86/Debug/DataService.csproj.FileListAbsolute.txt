@@ -1,5 +1,0 @@
-D:\项目软件\XLYSCADA\SCADA\Program\DataService\bin\Debug\DataService.dll
-D:\项目软件\XLYSCADA\SCADA\Program\DataService\bin\Debug\DataService.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\DataService\obj\x86\Debug\DataService.dll
-D:\项目软件\XLYSCADA\SCADA\Program\DataService\obj\x86\Debug\DataService.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\DataService\obj\x86\Debug\DataService.csprojResolveAssemblyReference.cache

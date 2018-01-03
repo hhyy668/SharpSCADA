@@ -1,8 +1,8 @@
-D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.MongoDB\obj\Debug\zxw.MongoDB.csprojFakesResolveAssemblyReference.cache
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.MongoDB\bin\Debug\zxw.MongoDB.dll
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.MongoDB\bin\Debug\zxw.MongoDB.pdb
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.MongoDB\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.MongoDB\bin\Debug\MongoDB.Bson.dll
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.MongoDB\bin\Debug\MongoDB.Driver.dll
+D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.MongoDB\obj\Debug\zxw.MongoDB.csprojFakesResolveAssemblyReference.cache
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.MongoDB\obj\Debug\zxw.MongoDB.dll
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\zxw.MongoDB\obj\Debug\zxw.MongoDB.pdb

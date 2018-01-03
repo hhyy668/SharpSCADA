@@ -10,7 +10,9 @@ namespace BatchCoreService
         /// </summary>
         static void Main()
         {
+            Console.Write("开始启动服务\n");
             BatchCoreTest srv = new BatchCoreTest();
+            Console.Write("完成启动服务\n");
             Console.ReadLine();
         }
     }

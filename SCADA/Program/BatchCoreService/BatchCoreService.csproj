@@ -16,7 +16,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -76,6 +76,10 @@
     <ProjectReference Include="..\DataService\DataService.csproj">
       <Project>{8965e389-6466-4b30-bd43-83c909044637}</Project>
       <Name>DataService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModbusDriver\ModbusDriver.csproj">
+      <Project>{aea44301-6a29-4af7-91e8-e6d755b618f1}</Project>
+      <Name>ModbusDriver</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

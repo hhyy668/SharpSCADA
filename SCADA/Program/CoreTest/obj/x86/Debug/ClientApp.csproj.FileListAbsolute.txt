@@ -12,9 +12,9 @@ D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\bin\Debug\System.Windows.Interac
 D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\bin\Debug\WPFToolkit.Extended.dll
 D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\bin\Debug\MySql.Data.dll
 D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\bin\Debug\ClientDriver.pdb
-D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\bin\Debug\HMIControl.pdb
 D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\bin\Debug\DataHelper.pdb
 D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\bin\Debug\DataService.pdb
+D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\bin\Debug\HMIControl.pdb
 D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\obj\x86\Debug\ClientApp.csprojResolveAssemblyReference.cache
 D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\obj\x86\Debug\Login.baml
 D:\项目软件\XLYSCADA\SCADA\Program\CoreTest\obj\x86\Debug\MaterialRecivingLine.baml

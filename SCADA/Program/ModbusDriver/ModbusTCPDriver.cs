@@ -7,6 +7,7 @@ using System.Text;
 using System.Timers;
 using DataService;
 
+
 namespace ModbusDriver
 {
     [Description("Modbus TCP协议")]
@@ -29,6 +30,7 @@ namespace ModbusDriver
 
         public DeviceAddress GetDeviceAddress(string address)
         {
+            Console.Write("获取设备地址\n");
             DeviceAddress dv = DeviceAddress.Empty;
             if (string.IsNullOrEmpty(address))
                 return dv;
@@ -249,9 +251,11 @@ namespace ModbusDriver
                 {
                     try
                     {
+                        Console.WriteLine("SEND:" + BitConverter.ToString(write_data, 0).ToUpper() + "\n");     
                         tcpSynCl.Send(write_data, 0, write_data.Length, SocketFlags.None);//是否存在lock的问题？
                         int result = tcpSynCl.Receive(tcpSynClBuffer, 0, 0xFF, SocketFlags.None);
-
+                        Console.WriteLine("receive:" + BitConverter.ToString(tcpSynClBuffer, 0).ToUpper() + "\n");
+                        Console.Write("result:" + result + "\n");
                         byte function = tcpSynClBuffer[7];
                         byte[] data;
 
@@ -279,6 +283,7 @@ namespace ModbusDriver
                             data = new byte[tcpSynClBuffer[8]];
                             Array.Copy(tcpSynClBuffer, 9, data, 0, tcpSynClBuffer[8]);
                         }
+                        Console.WriteLine("变量:" + BitConverter.ToString(data, 0).ToUpper() + "\n");
                         return data;
                     }
                     catch (SocketException)

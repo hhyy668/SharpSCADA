@@ -1,4 +1,3 @@
-D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\obj\Debug\Entiry.csprojResolveAssemblyReference.cache
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\bin\Debug\Entiry.dll
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\bin\Debug\Entiry.pdb
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\bin\Debug\Easy4net.dll
@@ -8,5 +7,6 @@ D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\bin\Debug\MySql.Data.dll
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\bin\Debug\Easy4net.pdb
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\bin\Debug\Easy4net.xml
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\bin\Debug\log4net.xml
+D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\obj\Debug\Entiry.csprojResolveAssemblyReference.cache
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\obj\Debug\Entiry.dll
 D:\项目软件\XLYSCADA\SCADA\Program\XlyApp\Entiry\obj\Debug\Entiry.pdb
