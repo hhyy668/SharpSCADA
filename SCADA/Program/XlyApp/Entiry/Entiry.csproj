@@ -50,7 +50,7 @@
     <Compile Include="Enumeration\ArticleEnum.cs" />
     <Compile Include="Enumeration\FileEnum.cs" />
     <Compile Include="Enumeration\MobileEnum.cs" />
-    <Compile Include="Enumeration\NewsEnum.cs" />
+    <Compile Include="Enumeration\JobOrderEnum.cs" />
     <Compile Include="Enumeration\PermissionEnum.cs" />
     <Compile Include="Enumeration\SystemEnum.cs" />
     <Compile Include="EPermission.cs" />

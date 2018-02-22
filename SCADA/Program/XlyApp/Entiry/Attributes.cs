@@ -77,7 +77,25 @@ namespace Easy4net.Entity
             else
                 return "";
         }
-
+        /// <summary>
+        /// 获取某个枚举值 根据Description
+        /// </summary>
+        /// <typeparam name="TEnum"></typeparam>
+        /// <param name="enumValue"></param>
+        /// <returns></returns>
+        public static string GetEnumKeyByDescription<TEnum>(string Description)
+        {
+            IDictionary<int, string> kv = GetEnumValueDesc<TEnum>();
+            foreach (var item in kv)
+            {
+                if (item.Value == Description)
+                {
+                    return item.Key.ToString();
+                }
+                
+            }
+            return "";
+        }
         /// <summary>
         /// 获取某个枚举某个值的Description
         /// </summary>

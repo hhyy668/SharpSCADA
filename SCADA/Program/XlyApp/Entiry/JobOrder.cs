@@ -1,7 +1,4 @@
-﻿
-
-
-using Easy4net.CustomAttributes;
+﻿using Easy4net.CustomAttributes;
 using System;
 using System.Linq;
 namespace Easy4net.Entity
@@ -9,9 +6,17 @@ namespace Easy4net.Entity
 	
 	[Table(Name = "JobOrder")] 
 	public class JobOrder
-	{    
-      	/// <summary>
-		/// 任务单主键
+	{
+        public JobOrder()
+        {
+            Status = 1;
+            CreateTime = DateTime.Now;
+            ModifyTime = DateTime.Now;
+            StartTime = "1900-01-01 00:00:00".ToDateTime();
+            EndTime = "1900-01-01 00:00:00".ToDateTime();
+        }
+        /// <summary>
+        /// 任务单主键
         /// </summary>		
         [Id(Name = "JobOrderID", Strategy = GenerationType.INDENTITY)]
         public int JobOrderID { get; set;}       
@@ -34,12 +39,12 @@ namespace Easy4net.Entity
 		/// 开始时间
         /// </summary>		
 		[Column(Name = "StartTime")]
-        public DateTime StartTime { get; set;}       
+        public DateTime? StartTime { get; set;}       
 		/// <summary>
 		/// 结束时间
         /// </summary>		
 		[Column(Name = "EndTime")]
-        public DateTime EndTime { get; set;}       
+        public DateTime? EndTime { get; set;}       
 		/// <summary>
 		/// 数量
         /// </summary>		

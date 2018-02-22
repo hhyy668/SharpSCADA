@@ -1,7 +1,4 @@
-﻿
-
-
-using Easy4net.CustomAttributes;
+﻿using Easy4net.CustomAttributes;
 using System;
 using System.Linq;
 namespace Easy4net.Entity
@@ -9,9 +6,15 @@ namespace Easy4net.Entity
 	
 	[Table(Name = "ProcessSteps")] 
 	public class ProcessSteps
-	{    
-      	/// <summary>
-		/// 工艺步骤主键
+	{
+        public ProcessSteps()
+        {
+            Statue = 1;
+            StartTime = "1900-01-01 00:00:00".ToDateTime();
+            EntTime = "1900-01-01 00:00:00".ToDateTime();
+        }
+        /// <summary>
+        /// 工艺步骤主键
         /// </summary>		
         [Id(Name = "ProcessStepsID", Strategy = GenerationType.INDENTITY)]
         public int ProcessStepsID { get; set;}       

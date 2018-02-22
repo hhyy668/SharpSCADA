@@ -1,7 +1,4 @@
-﻿
-
-
-using Easy4net.CustomAttributes;
+﻿using Easy4net.CustomAttributes;
 using System;
 using System.Linq;
 namespace Easy4net.Entity
@@ -9,9 +6,13 @@ namespace Easy4net.Entity
 	
 	[Table(Name = "Station")] 
 	public class Station
-	{    
-      	/// <summary>
-		/// 工位主键
+	{
+        public Station()
+        {
+            StationStatus = 1;
+        }
+        /// <summary>
+        /// 工位主键
         /// </summary>		
         [Id(Name = "StationID", Strategy = GenerationType.INDENTITY)]
         public int StationID { get; set;}       

@@ -1,0 +1,18 @@
+﻿<Window x:Class="CoreTest.BasicInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="基础信息维护" Height="600" Width="900">
+    <DockPanel Width="Auto" Height="Auto" LastChildFill="True">
+        <StackPanel Width="130" Height="Auto" Background="Gray" DockPanel.Dock="Left">
+            <Button Margin="5" Name="btnBridgeCrane" Width="Auto" Height="30" Content="行车信息管理" Click="btnBridgeCrane_Click"/>
+            <Button Margin="5" Name="btnPool" Width="Auto" Height="30" Content="酸洗池信息管理" Click="btnPool_Click"/>
+            <Button Margin="5" Name="btnStation" Width="Auto" Height="30" Content="工位信息管理" Click="btnStation_Click"/>
+            <Button Margin="5" Name="btnRacks" Width="Auto" Height="30" Content="挂具信息管理" Click="btnRacks_Click"/>
+            <Button Margin="5" Name="Materiel" Width="Auto" Height="30" Content="物料类型管理" Click="Materiel_Click"/>
+            <Button Margin="5" Name="ProcessRoute" Width="Auto" Height="30" Content="工艺路线" Click="ProcessRoute_Click"/>
+        </StackPanel>
+        <Grid Width="Auto" Height="Auto" Background="White" >
+            <StackPanel Name="stackPanel1"></StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

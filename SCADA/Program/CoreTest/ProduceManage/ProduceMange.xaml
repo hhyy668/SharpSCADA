@@ -1,0 +1,15 @@
+﻿<Window x:Class="CoreTest.ProduceMange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="生产管理" Height="600" Width="900">
+    <DockPanel Width="Auto" Height="Auto" LastChildFill="True">
+        <StackPanel Width="130" Height="Auto" Background="Gray" DockPanel.Dock="Left">
+            <Button Margin="5" Name="btnProductionOrder" Width="Auto" Height="30" Content="生产订单管理" Click="btnProductionOrder_Click"/>
+            <Button Margin="5" Name="btnJobOrder" Width="Auto" Height="30" Content="任务单管理" Click="btnJobOrder_Click"/>
+            <Button Margin="5" Name="btnProcessSteps" Width="Auto" Height="30" Content="加工步骤管理" Click="btnProcessSteps_Click"/>
+        </StackPanel>
+        <Grid Width="Auto" Height="Auto" Background="White" >
+            <StackPanel Name="stackPanel1"></StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

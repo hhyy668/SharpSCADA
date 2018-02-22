@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="CoreTest.JobOrderBlock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             Loaded="Window_Loaded" Height="232.105" >
+    <StackPanel Orientation="Vertical"  HorizontalAlignment="Center" Width="590"  >
+        <WrapPanel >
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center"  >
+                <TextBlock Text="任务单号:"  Width="100" VerticalAlignment="Center"/>
+                <TextBox Text="" Width="180" Height="30" Name="txtJobOrderCode" VerticalAlignment="Center" Margin="5" />
+                <TextBlock Text="开始时间:"  Width="100" VerticalAlignment="Center"/>
+                <TextBox Text="" Width="180" Height="30" Name="txtStartTime" VerticalAlignment="Center" Margin="5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center"  >
+                <TextBlock Text="生产单主键:"  Width="100" VerticalAlignment="Center"/>
+                <TextBox Text="" Width="180" Height="30" Name="txtProductionOderID" VerticalAlignment="Center" Margin="5" />
+                <TextBlock Text="数量:"  Width="100" VerticalAlignment="Center"/>
+                <TextBox Text="" Width="180" Height="30" Name="txtNumber" VerticalAlignment="Center" Margin="5" />
+            </StackPanel>
+        </WrapPanel>
+
+    </StackPanel>
+</UserControl>

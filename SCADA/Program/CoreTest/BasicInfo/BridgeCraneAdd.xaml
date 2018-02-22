@@ -1,0 +1,32 @@
+﻿
+
+<Window x:Class="CoreTest.BridgeCraneAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="新建行车"  Width="400">       
+        <StackPanel Orientation="Vertical"  HorizontalAlignment="Center"  >
+        	<StackPanel Orientation="Horizontal"   HorizontalAlignment="Center" >
+               <Label x:Name="label" Content="新建行车" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+            </StackPanel>
+        	        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="行车主键:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtBridgeCraneID" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="行车名称:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtBridgeCraneName" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="行车状态（1-空闲，2-使用中）:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtBridgeCraneStatus" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="空闲时所处工位主键:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtStationID" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>
+        <StackPanel  Orientation="Horizontal" Margin="0" HorizontalAlignment="Center">
+	            <Button Width="60" Height="30" Name="btnAdd" Margin="5,5,5,5" Click="btnSave_Click">提交</Button>
+	            <Button Width="60" Height="30" Name="btnCancel" Margin="5,5,5,5" Click="btnCancel_Click">取消</Button>
+	        </StackPanel>
+		</StackPanel>
+</Window>

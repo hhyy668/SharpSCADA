@@ -42,5 +42,17 @@ namespace CoreTest
             TagMonitor tag = new TagMonitor();
             tag.Show();
         }
+
+        private void ProduceMange_Click(object sender, RoutedEventArgs e)
+        {
+            ProduceMange produceMange = new ProduceMange();
+            produceMange.Show();
+        }
+
+        private void WorkSpace_Click(object sender, RoutedEventArgs e)
+        {
+            WorkSpaceMain workSpace= new WorkSpaceMain();
+            workSpace.Show();
+        }
     }
 }

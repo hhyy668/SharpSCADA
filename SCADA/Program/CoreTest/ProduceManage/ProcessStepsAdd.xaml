@@ -1,0 +1,56 @@
+﻿
+
+<Window x:Class="CoreTest.ProcessStepsAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="新建工艺步骤"  Width="400">       
+        <StackPanel Orientation="Vertical"  HorizontalAlignment="Center"  >
+        	<StackPanel Orientation="Horizontal"   HorizontalAlignment="Center" >
+               <Label x:Name="label" Content="新建工艺步骤" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+            </StackPanel>
+        	        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="工艺步骤主键:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtProcessStepsID" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="任务单主键:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtJobOrderID" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="步骤序号:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtStepNumber" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="步骤名称:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtStepName" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="应停留时长:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtLengthOfStay" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="应处理池类型:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtProcessingPoolType" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="开始时间:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtStartTime" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="结束时间:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtEntTime" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="状态（1-开始时间，2-执行中，已完成）:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtStatue" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="工位主键:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtStationID" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>
+        <StackPanel  Orientation="Horizontal" Margin="0" HorizontalAlignment="Center">
+	            <Button Width="60" Height="30" Name="btnAdd" Margin="5,5,5,5" Click="btnSave_Click">提交</Button>
+	            <Button Width="60" Height="30" Name="btnCancel" Margin="5,5,5,5" Click="btnCancel_Click">取消</Button>
+	        </StackPanel>
+		</StackPanel>
+</Window>

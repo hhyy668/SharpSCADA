@@ -32,23 +32,31 @@ namespace Easy4net.Entity
         None = 0,
     }
     /// <summary>
-    /// 导航系统
+    /// 池类型
     /// </summary>
-    public enum SlnSysEnum
+    public enum PoolTypeEnum
     {
         [Description("未设置", true)]
         None = 0,
-        [Description("GPS")]
-        GPS = 1,
-        [Description("BEIDOU")]
-        BEIDOU = 2,
-        [Description("GLONASS")]
-        GLONASS = 3,
-        [Description("GALILEO")]
-        GALILEO = 4,
-        [Description("GPS+BEIDOU")]
-        GPS_BEIDOU = 5,
-        [Description("ALL")]
-        ALL = 6,
+        [Description("进料池")]
+        InPool = 1,
+        [Description("水洗池")]
+        WaterPool = 2,
+        [Description("浓酸池")]
+        StrongPicklingPool = 3,
+        [Description("普通酸洗")]
+        PicklingPool = 4,
+        [Description("出料池")]
+        OutPool = 5,
+    }
+    
+    public enum EditModeEnum
+    {
+        [Description("未设置", true)]
+        None = 0,
+        [Description("新建")]
+        Add = 1,
+        [Description("修改")]
+        Modify = 2,
     }
 }

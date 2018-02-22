@@ -1,7 +1,4 @@
-﻿
-
-
-using Easy4net.CustomAttributes;
+﻿using Easy4net.CustomAttributes;
 using System;
 using System.Linq;
 namespace Easy4net.Entity

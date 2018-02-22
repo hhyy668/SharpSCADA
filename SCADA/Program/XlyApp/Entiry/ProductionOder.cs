@@ -1,6 +1,4 @@
 ﻿
-
-
 using Easy4net.CustomAttributes;
 using System;
 using System.Linq;
@@ -9,9 +7,14 @@ namespace Easy4net.Entity
 	
 	[Table(Name = "ProductionOder")] 
 	public class ProductionOder
-	{    
-      	/// <summary>
-		/// 生产单主键
+	{
+        public ProductionOder()
+        {
+            CreateTime = DateTime.Now;
+            ModifyTime = DateTime.Now;
+        }
+        /// <summary>
+        /// 生产单主键
         /// </summary>		
         [Id(Name = "ProductionOderID", Strategy = GenerationType.INDENTITY)]
         public int ProductionOderID { get; set;}       

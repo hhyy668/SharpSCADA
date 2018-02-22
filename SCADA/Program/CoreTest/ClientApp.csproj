@@ -84,18 +84,39 @@
     <Compile Include="AlarmSet.xaml.cs">
       <DependentUpon>AlarmSet.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BasicInfo.xaml.cs">
+    <Compile Include="BasicInfo\BasicInfo.xaml.cs">
       <DependentUpon>BasicInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BridgeCraneAdd.xaml.cs">
+    <Compile Include="ProduceManage\ProduceMange.xaml.cs">
+      <DependentUpon>ProduceMange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceManage\JobOrderAdd.xaml.cs">
+      <DependentUpon>JobOrderAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceManage\JobOrderMain.xaml.cs">
+      <DependentUpon>JobOrderMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo\MaterielAdd.xaml.cs">
+      <DependentUpon>MaterielAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo\MaterielMain.xaml.cs">
+      <DependentUpon>MaterielMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo\PoolAdd.xaml.cs">
+      <DependentUpon>PoolAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo\BridgeCraneAdd.xaml.cs">
       <DependentUpon>BridgeCraneAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BridgeCraneMain.xaml.cs">
+    <Compile Include="BasicInfo\PoolMain.xaml.cs">
+      <DependentUpon>PoolMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo\BridgeCraneMain.xaml.cs">
       <DependentUpon>BridgeCraneMain.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClientService.cs" />
     <Compile Include="ConfigCache.cs" />
-    <Compile Include="Guage.xaml.cs">
+    <Compile Include="VisualSimulation\Guage.xaml.cs">
       <DependentUpon>Guage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Index.xaml.cs">
@@ -108,50 +129,111 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MaterialRecivingLine.xaml.cs">
+    <Compile Include="VisualSimulation\MaterialRecivingLine.xaml.cs">
       <DependentUpon>MaterialRecivingLine.xaml</DependentUpon>
     </Compile>
     <Compile Include="MemberPrincipal.cs" />
     <Compile Include="MyCollection.cs" />
     <Compile Include="MyCommand.cs" />
     <Compile Include="MyConvert.cs" />
-    <Compile Include="PoolControl.xaml.cs">
-      <DependentUpon>PoolControl.xaml</DependentUpon>
+    <Compile Include="BasicInfo\ProcessRouteAdd.xaml.cs">
+      <DependentUpon>ProcessRouteAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RuntimeChart.xaml.cs">
+    <Compile Include="BasicInfo\ProcessRouteMain.xaml.cs">
+      <DependentUpon>ProcessRouteMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceManage\ProcessStepsAdd.xaml.cs">
+      <DependentUpon>ProcessStepsAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceManage\ProcessStepsMain.xaml.cs">
+      <DependentUpon>ProcessStepsMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceManage\ProductionOderAdd.xaml.cs">
+      <DependentUpon>ProductionOderAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceManage\ProductionOderMain.xaml.cs">
+      <DependentUpon>ProductionOderMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo\RacksAdd.xaml.cs">
+      <DependentUpon>RacksAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo\RacksMain.xaml.cs">
+      <DependentUpon>RacksMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualSimulation\RuntimeChart.xaml.cs">
       <DependentUpon>RuntimeChart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SiloProductLine.xaml.cs">
+    <Compile Include="VisualSimulation\SiloProductLine.xaml.cs">
       <DependentUpon>SiloProductLine.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StartDevice.xaml.cs">
+    <Compile Include="VisualSimulation\StartDevice.xaml.cs">
       <DependentUpon>StartDevice.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BasicInfo\StationAdd.xaml.cs">
+      <DependentUpon>StationAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicInfo\StationMain.xaml.cs">
+      <DependentUpon>StationMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SystemLog.cs" />
-    <Compile Include="TagMonitor.xaml.cs">
+    <Compile Include="VisualSimulation\TagMonitor.xaml.cs">
       <DependentUpon>TagMonitor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Trend.xaml.cs">
+    <Compile Include="VisualSimulation\Trend.xaml.cs">
       <DependentUpon>Trend.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowHelper.cs" />
+    <Compile Include="WorkSpace\JobOrderBlock.xaml.cs">
+      <DependentUpon>JobOrderBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkSpace\WorkSpaceMain.xaml.cs">
+      <DependentUpon>WorkSpaceMain.xaml</DependentUpon>
+    </Compile>
     <Page Include="AlarmSet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BasicInfo.xaml">
+    <Page Include="BasicInfo\BasicInfo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BridgeCraneAdd.xaml">
+    <Page Include="ProduceManage\ProduceMange.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BridgeCraneMain.xaml">
+    <Page Include="ProduceManage\JobOrderAdd.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Guage.xaml">
+    <Page Include="ProduceManage\JobOrderMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInfo\MaterielAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInfo\MaterielMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInfo\PoolAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInfo\BridgeCraneAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInfo\PoolMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInfo\BridgeCraneMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VisualSimulation\Guage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -171,33 +253,77 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MaterialRecivingLine.xaml">
+    <Page Include="VisualSimulation\MaterialRecivingLine.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PoolControl.xaml">
+    <Page Include="BasicInfo\ProcessRouteAdd.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="RuntimeChart.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SiloProductLine.xaml">
+    <Page Include="BasicInfo\ProcessRouteMain.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="StartDevice.xaml">
+    <Page Include="ProduceManage\ProcessStepsAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProduceManage\ProcessStepsMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProduceManage\ProductionOderAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProduceManage\ProductionOderMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInfo\RacksAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInfo\RacksMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VisualSimulation\RuntimeChart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TagMonitor.xaml">
+    <Page Include="VisualSimulation\SiloProductLine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VisualSimulation\StartDevice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Trend.xaml">
+    <Page Include="BasicInfo\StationAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BasicInfo\StationMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VisualSimulation\TagMonitor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualSimulation\Trend.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkSpace\JobOrderBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkSpace\WorkSpaceMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -358,6 +484,7 @@
   <ItemGroup>
     <Resource Include="Volume.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

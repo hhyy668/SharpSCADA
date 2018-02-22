@@ -1,0 +1,56 @@
+﻿
+
+<Window x:Class="CoreTest.MaterielAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="新建物料类型表"  Width="400">       
+        <StackPanel Orientation="Vertical"  HorizontalAlignment="Center"  >
+        	<StackPanel Orientation="Horizontal"   HorizontalAlignment="Center" >
+               <Label x:Name="label" Content="新建物料类型表" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+            </StackPanel>
+        	        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="物料类型主键:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtMaterielID" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="物料类型:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtMaterielType" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="规格:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtSpec" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="描述:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtDepict" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="脱脂:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtSkim" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="一次水洗:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtOneWash" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="酸洗:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtPickling" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="二次水洗:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtTwoWash" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="助剂:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtAuxiliary" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>      
+			        <StackPanel Orientation="Horizontal" >
+	            <TextBlock Text="烘干:"  Width="100" VerticalAlignment="Center"/>
+	            <TextBox Text="" Width="180" Height="30" Name="txtDry" VerticalAlignment="Center" Margin="5" />
+	        </StackPanel>
+        <StackPanel  Orientation="Horizontal" Margin="0" HorizontalAlignment="Center">
+	            <Button Width="60" Height="30" Name="btnAdd" Margin="5,5,5,5" Click="btnSave_Click">提交</Button>
+	            <Button Width="60" Height="30" Name="btnCancel" Margin="5,5,5,5" Click="btnCancel_Click">取消</Button>
+	        </StackPanel>
+		</StackPanel>
+</Window>
