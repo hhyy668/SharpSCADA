@@ -18,19 +18,16 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  Background="{DynamicResource {x:Static SystemColors.MenuBarBrushKey}}" />
         <ScrollViewer Margin="0" VerticalScrollBarVisibility="Auto">
-	<WrapPanel Orientation="Horizontal">
-
+          <WrapPanel Orientation="Horizontal">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="任务单主键:" VerticalAlignment="Center" Margin="5"/>
+                    <TextBlock Text="任务单号:" VerticalAlignment="Center" Margin="5"/>
                 <TextBox Text="" Width="200" Name="txtJobOrderID" VerticalAlignment="Center" Height="30" Margin="5"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="任务单号:" VerticalAlignment="Center" Margin="5"/>
-                <TextBox Text="" Width="200" Name="txtJobOrderCode" VerticalAlignment="Center" Height="30" Margin="5"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
+                </StackPanel> 
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="挂具号:" VerticalAlignment="Center" Margin="5"/>
+                    <TextBox Text="" Width="200" Name="txtRacksID" VerticalAlignment="Center" Height="30" Margin="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
                 <TextBlock Text="生产单主键:" VerticalAlignment="Center" Margin="5"/>
                 <TextBox Text="" Width="200" Name="txtProductionOderID" VerticalAlignment="Center" Height="30" Margin="5"/>
             </StackPanel>
@@ -79,7 +76,6 @@
         <Button Grid.Column="1" Width="60" Height="30" Name="btnSearch" Click="btnSearch_Click">查询</Button>
         <StackPanel Orientation="Horizontal" Grid.Row="1"  Grid.ColumnSpan="2"  Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
             <Button Grid.Row="1" Name="btnAdd"  Width="60" Height="30" Margin="5" Click="btnAdd_Click">添加</Button>
-            <Button Grid.Row="1" Name="btnModify" Width="60" Height="30" Margin="5" Click="btnModify_Click">修改</Button>
             <Button Grid.Row="1" Name="btnDelete" Width="60" Height="30" Margin="5" Click="btnDelete_Click">删除</Button>
         </StackPanel>
         <ListView Grid.Row="2"  Grid.ColumnSpan="2" Name="JobOrderList"  ItemsSource="{Binding}">
@@ -90,11 +86,12 @@
 
                         <GridViewColumn Header="任务单主键" Width="150" DisplayMemberBinding="{Binding Path=JobOrderID}"></GridViewColumn>
 
-                        <GridViewColumn Header="任务单号" Width="150" DisplayMemberBinding="{Binding Path=JobOrderCode}"></GridViewColumn>
+                        <GridViewColumn Header="挂具号" Width="150" DisplayMemberBinding="{Binding Path=RacksID}"></GridViewColumn>
 
                         <GridViewColumn Header="生产单主键" Width="150" DisplayMemberBinding="{Binding Path=ProductionOderID}"></GridViewColumn>
+                        <GridViewColumn Header="进料单" Width="150" DisplayMemberBinding="{Binding Path=ReciveRecordID}"></GridViewColumn>
 
-                        <GridViewColumn Header="状态 （1-未开始，2-执行中，3-已完成）" Width="150" DisplayMemberBinding="{Binding Path=Status}"></GridViewColumn>
+                        <GridViewColumn Header="状态（1-未开始，2-执行中，3-已完成）" Width="150" DisplayMemberBinding="{Binding Path=Status}"></GridViewColumn>
 
                         <GridViewColumn Header="开始时间" Width="150" DisplayMemberBinding="{Binding Path=StartTime}"></GridViewColumn>
 
@@ -102,13 +99,13 @@
 
                         <GridViewColumn Header="数量" Width="150" DisplayMemberBinding="{Binding Path=Number}"></GridViewColumn>
 
-                        <GridViewColumn Header="创建时间" Width="150" DisplayMemberBinding="{Binding Path=CreateTime}"></GridViewColumn>
+                        <GridViewColumn Header="创建时间" Width="0" DisplayMemberBinding="{Binding Path=CreateTime}"></GridViewColumn>
 
-                        <GridViewColumn Header="创建人" Width="150" DisplayMemberBinding="{Binding Path=CteateUser}"></GridViewColumn>
+                        <GridViewColumn Header="创建人" Width="0" DisplayMemberBinding="{Binding Path=CteateUser}"></GridViewColumn>
 
-                        <GridViewColumn Header="修改时间" Width="150" DisplayMemberBinding="{Binding Path=ModifyTime}"></GridViewColumn>
+                        <GridViewColumn Header="修改时间" Width="0" DisplayMemberBinding="{Binding Path=ModifyTime}"></GridViewColumn>
 
-                        <GridViewColumn Header="修改人" Width="150" DisplayMemberBinding="{Binding Path=ModifyUser}"></GridViewColumn>
+                        <GridViewColumn Header="修改人" Width="0" DisplayMemberBinding="{Binding Path=ModifyUser}"></GridViewColumn>
                     </GridView.Columns>
                 </GridView>
             </ListView.View>

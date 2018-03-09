@@ -106,7 +106,7 @@ namespace CoreTest
             ProcessRoute processroute = ProcessRouteList.SelectedItem as ProcessRoute;
             if (processroute == null)
             {
-                MessageBox.Show("请选择要删除的行");
+                MessageBox.Show("请选择要修改的行");
                 return;
             }
             _processrouteForm.processroute = processroute;

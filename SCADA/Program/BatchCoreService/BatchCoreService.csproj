@@ -77,9 +77,13 @@
       <Project>{8965e389-6466-4b30-bd43-83c909044637}</Project>
       <Name>DataService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ModbusDriver\ModbusDriver.csproj">
-      <Project>{aea44301-6a29-4af7-91e8-e6d755b618f1}</Project>
-      <Name>ModbusDriver</Name>
+    <ProjectReference Include="..\OPCDriver\OPCDriver.csproj">
+      <Project>{054db7ac-eb2c-439f-80d4-63e823b279c8}</Project>
+      <Name>OPCDriver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OPCLib\OPCLib.csproj">
+      <Project>{0ec75da7-20c7-4986-82e5-db011c6e961b}</Project>
+      <Name>OPCLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

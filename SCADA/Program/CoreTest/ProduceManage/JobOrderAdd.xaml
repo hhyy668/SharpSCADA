@@ -1,58 +1,162 @@
 ﻿<Window x:Class="CoreTest.JobOrderAdd"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="新建任务单"  Width="400">
-    <StackPanel Orientation="Vertical"  HorizontalAlignment="Center"  >
-        <StackPanel Orientation="Horizontal"   HorizontalAlignment="Center" >
-            <Label x:Name="label" Content="新建任务单" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="任务单主键:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtJobOrderID" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="任务单号:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtJobOrderCode" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="生产单主键:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtProductionOderID" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="状态 （1-未开始，2-执行中，3-已完成）:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtStatus" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="开始时间:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtStartTime" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="结束时间:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtEndTime" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="数量:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtNumber" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="创建时间:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtCreateTime" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="创建人:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtCteateUser" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="修改时间:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtModifyTime" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Text="修改人:"  Width="100" VerticalAlignment="Center"/>
-            <TextBox Text="" Width="180" Height="30" Name="txtModifyUser" VerticalAlignment="Center" Margin="5" />
-        </StackPanel>
-        <StackPanel  Orientation="Horizontal" Margin="0" HorizontalAlignment="Center" >
-            <Button Width="60" Height="30" Name="btnAdd" Margin="5,5,5,5" Click="btnSave_Click">提交</Button>
-            <Button Width="60" Height="30" Name="btnCancel" Margin="5,5,5,5" Click="btnCancel_Click">取消</Button>
-        </StackPanel>
-    </StackPanel>
+        Title="新建任务单"  Width="1024" Height="768" Loaded="Window_Loaded">
+    <TabControl x:Name="tabControl" TabStripPlacement="Left">
+        <TabItem Header="第一步：选择订单" Background="Azure" Height="80" FontSize="22" >
+            <StackPanel  Orientation="Vertical" Margin="0" HorizontalAlignment="Center" >
+                <ListBox x:Name="ProductionOderLst" SelectionChanged="ProductionOderLst_SelectionChanged" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  HorizontalAlignment="Left">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True"></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical"  HorizontalAlignment="Center"  Width="150" Height="90" >
+                                <TextBox Text="{Binding Path=ProductionOderID}" Name="txtProductionOderID" Visibility="Hidden"/>
+                                <TextBlock Text="{Binding Path=ProductionOderCode}"  Width="150" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding Path=CustomerName}" Width="150"  VerticalAlignment="Center" />
+                                <TextBlock Text="{Binding Path=MaterielType}"  Width="150" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding Path=Number}" Width="150"  VerticalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button Width="101" Height="30" Name="btnPONext" Margin="5,5,5,5" Click="btnPONext_Click">下一步</Button>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="第二步：选择检验单" FontSize="22" Height="80" >
+            <StackPanel  Orientation="Vertical" Margin="0" HorizontalAlignment="Center" >
+                <ListBox x:Name="ReciveRecordLst" SelectionChanged="ReciveRecordLst_SelectionChanged" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  HorizontalAlignment="Left">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True"></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical"  HorizontalAlignment="Center"  Width="150" Height="90">
+                                <TextBox Text="{Binding Path=ReciveRecordID}"  Name="txtReciveRecordID"  Visibility="Hidden"/>
+                                <TextBlock Text="{Binding Path=ReciveRecordID}"  Width="150" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding Path=CorrosionDegree}" Width="150"  VerticalAlignment="Center" />
+                                <TextBlock Text="{Binding Path=CorrosionMsg}"  Width="150" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding Path=AcceptWeight}" Width="150"  VerticalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button Width="94" Height="30" Name="btnRRNext" Margin="5,5,5,5" Click="btnRRNext_Click">下一步</Button>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="第三步：选择挂具" Height="80" FontSize="22" >
+            <StackPanel  Orientation="Vertical" Margin="0" HorizontalAlignment="Center" >
+                <ListBox x:Name="RacksLst" SelectionChanged="RacksLst_SelectionChanged" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  HorizontalAlignment="Left">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True"></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Width="150" Height="90">
+                                <TextBox Text="{Binding Path=RacksID}"  Name="txtRacksID"  Visibility="Hidden"/>
+                                <TextBlock Text="{Binding Path=RacksName}"  VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding Path=RacksType}"  VerticalAlignment="Center" />
+                                <TextBlock Text="{Binding Path=RacksStatus}" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button Width="88" Height="30" Name="btnRackNext" Margin="5,5,5,5" Click="btnRackNext_Click">下一步</Button>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="第四步：工艺步骤设置" Name="deb" Height="80" FontSize="22">
+            <StackPanel Orientation="Vertical" Margin="2" >
+                <DataGrid x:Name="ListProcessSteps" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="9" Margin="0,0" CanUserAddRows="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="步骤号" Binding="{Binding StepNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SortDirection="Ascending"/>
+                        <DataGridTextColumn Header="步骤名" Binding="{Binding StepName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <DataGridComboBoxColumn  Header="处理池类型">
+                            <DataGridComboBoxColumn.EditingElementStyle>
+                                <Style TargetType="ComboBox">
+                                    <Setter Property="ItemsSource" Value="{Binding Path=DataContext.PoolType,ElementName=ListProcessSteps}" />
+                                    <Setter Property="DisplayMemberPath" Value="Value" />
+                                    <Setter Property="SelectedValuePath" Value="Value" />
+                                    <Setter Property="SelectedValue" Value="{Binding ProcessingPoolType,UpdateSourceTrigger=PropertyChanged}" />
+                                </Style>
+                            </DataGridComboBoxColumn.EditingElementStyle>
+                            <DataGridComboBoxColumn.ElementStyle>
+                                <Style TargetType="ComboBox">
+                                    <Setter Property="ItemsSource" Value="{Binding Path=DataContext.PoolType,ElementName=ListProcessSteps}" />
+                                    <Setter Property="DisplayMemberPath" Value="Value" />
+                                    <Setter Property="SelectedValuePath" Value="Value" />
+                                    <Setter Property="SelectedValue" Value="{Binding ProcessingPoolType}" />
+                                </Style>
+                            </DataGridComboBoxColumn.ElementStyle>
+                        </DataGridComboBoxColumn>
+                        <DataGridTemplateColumn Header="停留时间">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Name="Reduce" Content="减" Click="Reduce_Click"/>
+                                        <TextBlock Text="{Binding LengthOfStay, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                                        <Button Name="Increase" Content="加" Click="Increase_Click"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridComboBoxColumn  Header="工位类型">
+                            <DataGridComboBoxColumn.EditingElementStyle>
+                                <Style TargetType="ComboBox">
+                                    <Setter Property="ItemsSource" Value="{Binding Path=DataContext.StationType,ElementName=ListProcessSteps}" />
+                                    <Setter Property="DisplayMemberPath" Value="Value" />
+                                    <Setter Property="SelectedValuePath" Value="Key" />
+                                    <Setter Property="SelectedValue" Value="{Binding StationType,UpdateSourceTrigger=PropertyChanged}" />
+                                </Style>
+                            </DataGridComboBoxColumn.EditingElementStyle>
+                            <DataGridComboBoxColumn.ElementStyle>
+                                <Style TargetType="ComboBox">
+                                    <Setter Property="ItemsSource" Value="{Binding Path=DataContext.StationType,ElementName=ListProcessSteps}" />
+                                    <Setter Property="DisplayMemberPath" Value="Value" />
+                                    <Setter Property="SelectedValuePath" Value="Key" />
+                                    <Setter Property="SelectedValue" Value="{Binding StationType}" />
+                                </Style>
+                            </DataGridComboBoxColumn.ElementStyle>
+                        </DataGridComboBoxColumn>
+                        <DataGridTemplateColumn Header="操作">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Name="yc" Content="移除" Click="yc_Click"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="操作" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Name="fz" Content="复制" Click="fz_Click"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel  Orientation="Horizontal" Margin="0" HorizontalAlignment="Center" >
+                    <Button Width="200" Height="50" Name="btnDebNext" Margin="5,5,5,5" Click="btnDebNext_Click">下一步</Button>
+                </StackPanel>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="第五步：本挂处理数量" Name="dsb" Height="80" FontSize="22" >
+            <StackPanel Orientation="Vertical"  HorizontalAlignment="Center" >
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text="数量:"  Width="100" VerticalAlignment="Center"/>
+                    <TextBox Text="" Width="180" Height="30" Name="txtNumber" VerticalAlignment="Center" Margin="5" />
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0" HorizontalAlignment="Center" >
+                    <Button Width="108" Height="30" Name="btnAdd" Margin="5,5,5,5" Click="btnSave_Click">开始处理</Button>
+                    <Button Width="109" Height="30" Name="btnCancel" Margin="5,5,5,5" Click="btnCancel_Click">取消</Button>
+                </StackPanel>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+
 </Window>

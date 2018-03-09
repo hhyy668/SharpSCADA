@@ -86,7 +86,7 @@ namespace CoreTest
             BridgeCrane bridgecrane = BridgeCraneList.SelectedItem as BridgeCrane;
             if (bridgecrane == null)
             {
-                MessageBox.Show("请选择要删除的行");
+                MessageBox.Show("请选择要修改的行");
                 return;
             }
             _bridgecraneForm.bridgecrane = bridgecrane;

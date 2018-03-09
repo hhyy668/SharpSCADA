@@ -54,5 +54,11 @@ namespace CoreTest
             WorkSpaceMain workSpace= new WorkSpaceMain();
             workSpace.Show();
         }
+
+        private void History_Click(object sender, RoutedEventArgs e)
+        {
+            test test = new test();
+            test.Show();
+        }
     }
 }

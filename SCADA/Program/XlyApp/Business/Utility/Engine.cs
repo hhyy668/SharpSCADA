@@ -30,6 +30,7 @@ namespace Business
             Register(typeof(ProductionOderBLL), new ProductionOderBLL());
             Register(typeof(RacksBLL), new RacksBLL());
             Register(typeof(StationBLL), new StationBLL());
+            Register(typeof(ReciveRecordBLL), new ReciveRecordBLL());
             //重复添加
         }
 

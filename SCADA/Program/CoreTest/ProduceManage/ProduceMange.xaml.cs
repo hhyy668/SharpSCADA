@@ -29,7 +29,13 @@ namespace CoreTest
             ProductionOderMain demo = new ProductionOderMain();
             this.stackPanel1.Children.Add(demo);
         }
-
+        private void btnReciveRecord_Click(object sender, RoutedEventArgs e)
+        {
+            stackPanel1.Children.Clear();
+            ReciveRecordMain demo = new ReciveRecordMain();
+            this.stackPanel1.Children.Add(demo);
+        }
+        
         private void btnJobOrder_Click(object sender, RoutedEventArgs e)
         {
             stackPanel1.Children.Clear();

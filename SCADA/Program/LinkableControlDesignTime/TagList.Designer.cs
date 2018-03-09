@@ -232,7 +232,7 @@
             this.grp1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grp1.Location = new System.Drawing.Point(0, 265);
             this.grp1.Name = "grp1";
-            this.grp1.Size = new System.Drawing.Size(484, 189);
+            this.grp1.Size = new System.Drawing.Size(513, 189);
             this.grp1.TabIndex = 16;
             this.grp1.TabStop = false;
             this.grp1.Text = "属性";
@@ -283,7 +283,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(484, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(513, 25);
             this.bindingNavigator1.TabIndex = 15;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -424,7 +424,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(484, 240);
+            this.dataGridView1.Size = new System.Drawing.Size(513, 240);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
@@ -432,7 +432,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 454);
+            this.ClientSize = new System.Drawing.Size(513, 454);
             this.Controls.Add(this.grp1);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.dataGridView1);

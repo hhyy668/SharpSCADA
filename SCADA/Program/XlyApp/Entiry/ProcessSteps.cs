@@ -22,7 +22,7 @@ namespace Easy4net.Entity
 		/// 任务单主键
         /// </summary>		
 		[Column(Name = "JobOrderID")]
-        public int JobOrderID { get; set;}       
+        public string JobOrderID { get; set;}       
 		/// <summary>
 		/// 步骤序号
         /// </summary>		
@@ -42,11 +42,16 @@ namespace Easy4net.Entity
 		/// 应处理池类型
         /// </summary>		
 		[Column(Name = "ProcessingPoolType")]
-        public string ProcessingPoolType { get; set;}       
-		/// <summary>
-		/// 开始时间
+        public string ProcessingPoolType { get; set;}      
+        /// <summary>
+        /// 工位类型
         /// </summary>		
-		[Column(Name = "StartTime")]
+        [Column(Name = "StationType")]
+        public int StationType { get; set; }
+        /// <summary>
+        /// 开始时间
+        /// </summary>		
+        [Column(Name = "StartTime")]
         public DateTime StartTime { get; set;}       
 		/// <summary>
 		/// 结束时间
@@ -54,7 +59,7 @@ namespace Easy4net.Entity
 		[Column(Name = "EntTime")]
         public DateTime EntTime { get; set;}       
 		/// <summary>
-		/// 状态（1-开始时间，2-执行中，已完成）
+		/// 状态（1-未开始，2-执行中，已完成）
         /// </summary>		
 		[Column(Name = "Statue")]
         public int Statue { get; set;}       

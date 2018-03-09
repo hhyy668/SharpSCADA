@@ -30,7 +30,12 @@
                 <TextBox Text="" Width="200" Name="txtMaterielType" VerticalAlignment="Center" Height="30" Margin="5"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="适用工位:" VerticalAlignment="Center" Margin="5"/>
+                    <TextBox Text="" Width="200" Name="txtStationType" VerticalAlignment="Center" Height="30" Margin="5"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
                 <TextBlock Text="规格:" VerticalAlignment="Center" Margin="5"/>
                 <TextBox Text="" Width="200" Name="txtSpec" VerticalAlignment="Center" Height="30" Margin="5"/>
             </StackPanel>
@@ -86,6 +91,8 @@
                         <GridViewColumn Header="物料类型主键" Width="150" DisplayMemberBinding="{Binding Path=MaterielID}"></GridViewColumn>
 
                         <GridViewColumn Header="物料类型" Width="150" DisplayMemberBinding="{Binding Path=MaterielType}"></GridViewColumn>
+
+                        <GridViewColumn Header="适用工位" Width="150" DisplayMemberBinding="{Binding Path=StationType}"></GridViewColumn>
 
                         <GridViewColumn Header="规格" Width="150" DisplayMemberBinding="{Binding Path=Spec}"></GridViewColumn>
 

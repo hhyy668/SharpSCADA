@@ -25,6 +25,7 @@ namespace CoreTest
     public partial class ProductionOderMain : UserControl
     {
         ProductionOderBLL productionoderBll = Engine.GetProvider<ProductionOderBLL>();
+
         public ProductionOderMain()
         {
             InitializeComponent();
@@ -118,13 +119,13 @@ namespace CoreTest
             ProductionOder productionoder = ProductionOderList.SelectedItem as ProductionOder;
             if (productionoder == null)
             {
-                MessageBox.Show("请选择要删除的行");
+                MessageBox.Show("请选择要修改的行");
                 return;
             }
             _productionoderForm.productionoder = productionoder;
             _productionoderForm.ShowDialog();
             Sreach();
         }
-
+        
     }
 }

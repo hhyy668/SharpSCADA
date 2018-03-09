@@ -43,9 +43,13 @@ namespace CoreTest
             {
                 strWhere = strWhere + string.Format(" and JobOrderID like '%{0}%'", this.txtJobOrderID.Text.Trim());
             }
-            if (this.txtJobOrderCode.Text.Trim() != "")
+            if (this.txtRacksID.Text.Trim() != "")
             {
-                strWhere = strWhere + string.Format(" and JobOrderCode like '%{0}%'", this.txtJobOrderCode.Text.Trim());
+                strWhere = strWhere + string.Format(" and RacksID like '%{0}%'", this.txtRacksID.Text.Trim());
+            }
+            if (this.txtRacksID.Text.Trim() != "")
+            {
+                strWhere = strWhere + string.Format(" and RacksID like '%{0}%'", this.txtRacksID.Text.Trim());
             }
             if (this.txtProductionOderID.Text.Trim() != "")
             {
@@ -120,20 +124,6 @@ namespace CoreTest
                 MessageBox.Show("删除失败");
                 return;
             }
-        }
-        private void btnModify_Click(object sender, RoutedEventArgs e)
-        {
-            JobOrderAdd _joborderForm = new JobOrderAdd();
-            _joborderForm.EditMode = EditModeEnum.Modify;
-            JobOrder joborder = JobOrderList.SelectedItem as JobOrder;
-            if (joborder == null)
-            {
-                MessageBox.Show("请选择要删除的行");
-                return;
-            }
-            _joborderForm.joborder = joborder;
-            _joborderForm.ShowDialog();
-            Sreach();
         }
 
     }

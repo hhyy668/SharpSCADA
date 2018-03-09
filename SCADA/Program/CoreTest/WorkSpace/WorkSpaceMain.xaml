@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Loaded="Window_Loaded">
+             mc:Ignorable="d" Loaded="Window_Loaded"  Width="1024" Height="768" >
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Horizontal">
             <StackPanel Orientation="Horizontal" Width="120">
@@ -21,7 +21,7 @@
                 <Button Content="任务单号：" DockPanel.Dock="Bottom" />
             </DockPanel>
         </StackPanel>
-        <Grid>
+        <Grid Width="1024">
             <ListBox x:Name="Lst" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  HorizontalAlignment="Left">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -34,7 +34,7 @@
                             <StackPanel Orientation="Vertical" Background="Gray">
                                 <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" >
                                     <TextBlock Text="任务单号:"  Width="50" VerticalAlignment="Center"/>
-                                    <TextBlock Text="{Binding Path=JobOrderCode}" Width="125" Name="txtJobOrderCode" VerticalAlignment="Center" />
+                                    <TextBlock Text="{Binding Path=JobOrderID}" Width="125" Name="txtJobOrderID" VerticalAlignment="Center" />
                                     <TextBlock Text="开始时间:"  Width="50" VerticalAlignment="Center"/>
                                     <TextBlock Text="{Binding Path=StartTime}" Width="125" Name="txtStartTime" VerticalAlignment="Center" />
                                 </StackPanel>
@@ -49,11 +49,11 @@
                                         <ListBox.ItemTemplate>
                                             <DataTemplate>
                                                 <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center"  >
-                                                    <Button Width="50" x:Name="StepName" Content="{Binding StepName}"/>
-                                                    <Button Width="50" x:Name="ProcessingPoolType" Content="{Binding ProcessingPoolType}"/>
-                                                    <Button Width="50" x:Name="Statue" Content="{Binding Statue}"/>
-                                                    <Button Width="150" x:Name="StartTime" Content="{Binding StartTime}"/>
-                                                    <Button Width="50" x:Name="StationID" Content="{Binding StationID}"/>
+                                                    <Button Width="100" x:Name="StepName" Content="{Binding StepName}"/>
+                                                    <Button Width="100" x:Name="ProcessingPoolType" Content="{Binding ProcessingPoolType}"/>
+                                                    <Button Width="100" x:Name="Statue" Content="{Binding Statue}"/>
+                                                    <Button Width="90" x:Name="StartTime" Content="{Binding StartTime}"/>
+                                                    <Button Width="90" x:Name="StationID" Content="{Binding StationID}"/>
                                                 </StackPanel>
                                             </DataTemplate>
                                         </ListBox.ItemTemplate>

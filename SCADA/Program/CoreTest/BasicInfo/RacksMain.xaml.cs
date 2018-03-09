@@ -122,7 +122,7 @@ namespace CoreTest
             Racks racks = RacksList.SelectedItem as Racks;
             if (racks == null)
             {
-                MessageBox.Show("请选择要删除的行");
+                MessageBox.Show("请选择要修改的行");
                 return;
             }
             _racksForm.racks = racks;

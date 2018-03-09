@@ -319,6 +319,7 @@ namespace BatchCoreService
             {
                 if (d.IsClosed)
                 {
+                    Console.Write("重连\n");
                     d.Connect();//t.IsAlive可加入判断；如线程异常，重新启动。
                 }
             }
@@ -689,7 +690,7 @@ namespace BatchCoreService
                     、终止、启动）；可返回客户端一个可行的路径设备链、ERP交换数据指令（包含DATASET)，冗余切换指令等）
                      */
                     int ReceiveCount = s_Receive.Receive(buffer);
-                    Console.WriteLine("服务器收到（"+ ReceiveCount + "）:" + BitConverter.ToString(buffer, 0).ToUpper() + "\n");
+                    Console.WriteLine("服务器收到（" + ReceiveCount + "）:"  + "\n");//+ BitConverter.ToString(buffer, 0).ToUpper()
 
                     if (buffer[0] == FCTCOMMAND.fctHead)
                     {
@@ -1223,8 +1224,7 @@ namespace BatchCoreService
                     //Reverse(data);
                     DateTime start = _hda[0].TimeStamp;
                     //_array.CopyTo(data, 0);
-                    if (DataHelper.Instance.BulkCopy(new HDASqlReader(_hda, this), "Log_HData",
-                    string.Format("DELETE FROM Log_HData WHERE [TIMESTAMP]>'{0}'", start.ToString())))
+                    if (DataHelper.Instance.BulkCopy(new HDASqlReader(_hda, this), "Log_HData",string.Format("DELETE FROM Log_HData WHERE [TIMESTAMP]>'{0}'", start.ToString())))
                         _hdastart = DateTime.Now;
                     else ThreadPool.UnsafeQueueUserWorkItem(new WaitCallback(this.SaveCachedData), _hda.ToArray());
                     _hda.Clear();
@@ -1244,9 +1244,7 @@ namespace BatchCoreService
             while (true)
             {
                 if (count >= 5) return;
-                if (DataHelper.Instance.BulkCopy(new HDASqlReader(tempData, this), "Log_HData",
-                   string.Format("DELETE FROM Log_HData WHERE [TIMESTAMP] BETWEEN '{0}' AND '{1}'",
-                    startTime, endTime)))
+                if (DataHelper.Instance.BulkCopy(new HDASqlReader(tempData, this), "Log_HData",string.Format("DELETE FROM Log_HData WHERE [TIMESTAMP] BETWEEN '{0}' AND '{1}'",startTime, endTime)))
                 {
                     stateInfo = null;
                     _hdastart = DateTime.Now;
@@ -1355,8 +1353,9 @@ namespace BatchCoreService
 
         void grp_DataChange(object sender, DataChangeEventArgs e)
         {
-            Console.Write("改变值:" + e.Values+ "\n");
             var data = e.Values;
+            Console.Write("改变值个数:" + data.Count + "\n");
+            Console.Write("改变值:" + data[0].Value.Single+"   "+ data[0].TimeStamp + "\n");
             var now = DateTime.Now;
             if (_hasHda)
             {
@@ -1512,9 +1511,9 @@ namespace BatchCoreService
             IDriver dv = null;
             try
             {
-                if (className == "ModbusDriver.ModbusTCPReader")
+                if (className == "OPCDriver.OPCReader")//(className == "ModbusDriver.ModbusTCPReader")
                 {
-                    dv = new ModbusDriver.ModbusTCPReader(this, id, name, server, timeOut, spare1, spare2);
+                    dv = new OPCDriver.OPCReader(this, id, name, server, timeOut, spare1, spare2);
                     _drivers.Add(id, dv);
                 }
                 else

@@ -3,18 +3,14 @@
 <Window x:Class="CoreTest.ProductionOderAdd"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="新建生产单"  Width="400">       
+        Title="新建生产单"  Width="400"  Loaded="Window_Loaded">       
         <StackPanel Orientation="Vertical"  HorizontalAlignment="Center"  >
-        	<StackPanel Orientation="Horizontal"   HorizontalAlignment="Center" >
-               <Label x:Name="label" Content="新建生产单" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
-            </StackPanel>
-        	        <StackPanel Orientation="Horizontal" >
-	            <TextBlock Text="生产单主键:"  Width="100" VerticalAlignment="Center"/>
-	            <TextBox Text="" Width="180" Height="30" Name="txtProductionOderID" VerticalAlignment="Center" Margin="5" />
-	        </StackPanel>      
-			        <StackPanel Orientation="Horizontal" >
+        <StackPanel Orientation="Horizontal"   HorizontalAlignment="Center" >
+            <Label x:Name="label" Content="新建生产单" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
 	            <TextBlock Text="生产单号:"  Width="100" VerticalAlignment="Center"/>
-	            <TextBox Text="" Width="180" Height="30" Name="txtProductionOderCode" VerticalAlignment="Center" Margin="5" />
+	            <TextBox Text="" Width="180" Height="30" Name="txtProductionOderCode" VerticalAlignment="Center" Margin="5" IsReadOnly="True" />
 	        </StackPanel>      
 			        <StackPanel Orientation="Horizontal" >
 	            <TextBlock Text="客户名称:"  Width="100" VerticalAlignment="Center"/>
@@ -22,28 +18,14 @@
 	        </StackPanel>      
 			        <StackPanel Orientation="Horizontal" >
 	            <TextBlock Text="物料类型:"  Width="100" VerticalAlignment="Center"/>
-	            <TextBox Text="" Width="180" Height="30" Name="txtMaterielID" VerticalAlignment="Center" Margin="5" />
-	        </StackPanel>      
+	            <TextBox Text="" Width="0" Height="30" Name="txtMaterielID" VerticalAlignment="Center" Margin="0" Visibility="Hidden" />
+                <TextBox Text="" Width="180" Height="30" Name="txtMaterielType" VerticalAlignment="Center" Margin="5" />
+            <Button Width="30" Height="30" Content="..." Click="Button_Click" />
+        </StackPanel>      
 			        <StackPanel Orientation="Horizontal" >
 	            <TextBlock Text="数量:"  Width="100" VerticalAlignment="Center"/>
 	            <TextBox Text="" Width="180" Height="30" Name="txtNumber" VerticalAlignment="Center" Margin="5" />
 	        </StackPanel>      
-			        <StackPanel Orientation="Horizontal" >
-	            <TextBlock Text="创建时间:"  Width="100" VerticalAlignment="Center"/>
-	            <TextBox Text="" Width="180" Height="30" Name="txtCreateTime" VerticalAlignment="Center" Margin="5" />
-	        </StackPanel>      
-			        <StackPanel Orientation="Horizontal" >
-	            <TextBlock Text="创建人:"  Width="100" VerticalAlignment="Center"/>
-	            <TextBox Text="" Width="180" Height="30" Name="txtCteateUser" VerticalAlignment="Center" Margin="5" />
-	        </StackPanel>      
-			        <StackPanel Orientation="Horizontal" >
-	            <TextBlock Text="修改时间:"  Width="100" VerticalAlignment="Center"/>
-	            <TextBox Text="" Width="180" Height="30" Name="txtModifyTime" VerticalAlignment="Center" Margin="5" />
-	        </StackPanel>      
-			        <StackPanel Orientation="Horizontal" >
-	            <TextBlock Text="修改人:"  Width="100" VerticalAlignment="Center"/>
-	            <TextBox Text="" Width="180" Height="30" Name="txtModifyUser" VerticalAlignment="Center" Margin="5" />
-	        </StackPanel>
         <StackPanel  Orientation="Horizontal" Margin="0" HorizontalAlignment="Center">
 	            <Button Width="60" Height="30" Name="btnAdd" Margin="5,5,5,5" Click="btnSave_Click">提交</Button>
 	            <Button Width="60" Height="30" Name="btnCancel" Margin="5,5,5,5" Click="btnCancel_Click">取消</Button>

@@ -32,11 +32,14 @@ namespace Easy4net.Entity
 		/// 物料类型
         /// </summary>		
 		[Column(Name = "MaterielID")]
-        public string MaterielID { get; set;}       
-		/// <summary>
-		/// 数量
+        public string MaterielID { get; set;}
+        [Column(Name = "MaterielType")]
+        public string MaterielType { get; set; }
+        
+        /// <summary>
+        /// 数量
         /// </summary>		
-		[Column(Name = "Number")]
+        [Column(Name = "Number")]
         public decimal Number { get; set;}       
 		/// <summary>
 		/// 创建时间

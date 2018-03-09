@@ -58,7 +58,7 @@ namespace CoreTest
             {
 
                 processsteps.ProcessStepsID = this.txtProcessStepsID.Text.Trim().ToInt();
-                processsteps.JobOrderID = this.txtJobOrderID.Text.Trim().ToInt();
+                processsteps.JobOrderID = this.txtJobOrderID.Text.Trim();
                 processsteps.StepNumber = this.txtStepNumber.Text.Trim().ToInt();
                 processsteps.StepName = this.txtStepName.Text.Trim();
                 processsteps.LengthOfStay = this.txtLengthOfStay.Text.Trim().ToInt();
@@ -78,7 +78,7 @@ namespace CoreTest
             {
                 ProcessSteps model = new ProcessSteps();
                 model.ProcessStepsID = txtProcessStepsID.Text.Trim().ToInt();
-                model.JobOrderID = txtJobOrderID.Text.Trim().ToInt();
+                model.JobOrderID = txtJobOrderID.Text.Trim();
                 model.StepNumber = txtStepNumber.Text.Trim().ToInt();
                 model.StepName = txtStepName.Text.Trim();
                 model.LengthOfStay = txtLengthOfStay.Text.Trim().ToInt();

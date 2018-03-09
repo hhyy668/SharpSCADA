@@ -18,22 +18,29 @@ namespace Easy4net.Entity
         /// <summary>
         /// 任务单主键
         /// </summary>		
-        [Id(Name = "JobOrderID", Strategy = GenerationType.INDENTITY)]
-        public int JobOrderID { get; set;}       
-		/// <summary>
-		/// 任务单号
+        [Id(Name = "JobOrderID", Strategy = GenerationType.FILL)]
+        public string JobOrderID { get; set;}       
+        /// <summary>
+		/// 挂具编号
         /// </summary>		
-		[Column(Name = "JobOrderCode")]
-        public string JobOrderCode { get; set;}       
-		/// <summary>
-		/// 生产单主键
+		[Column(Name = "RacksID")]
+        public string RacksID { get; set; }
+        
+        /// <summary>
+        /// 生产单主键
         /// </summary>		
-		[Column(Name = "ProductionOderID")]
-        public int ProductionOderID { get; set;}       
-		/// <summary>
-		/// 状态 （1-未开始，2-执行中，3-已完成）
+        [Column(Name = "ProductionOderID")]
+        public int ProductionOderID { get; set;}
+        /// <summary>
+        /// 进料单主键
         /// </summary>		
-		[Column(Name = "Status")]
+        [Column(Name = "ReciveRecordID")]
+        public string ReciveRecordID { get; set; }
+        
+        /// <summary>
+        /// 状态 （1-未开始，2-执行中，3-已完成）
+        /// </summary>		
+        [Column(Name = "Status")]
         public int Status { get; set;}       
 		/// <summary>
 		/// 开始时间

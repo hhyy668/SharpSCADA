@@ -87,6 +87,9 @@
     <Compile Include="BasicInfo\BasicInfo.xaml.cs">
       <DependentUpon>BasicInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BasicInfo\MaterielSelect.xaml.cs">
+      <DependentUpon>MaterielSelect.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProduceManage\ProduceMange.xaml.cs">
       <DependentUpon>ProduceMange.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,21 @@
     </Compile>
     <Compile Include="ClientService.cs" />
     <Compile Include="ConfigCache.cs" />
+    <Compile Include="ProduceManage\ProductionOderSelect.xaml.cs">
+      <DependentUpon>ProductionOderSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceManage\ReciveRecordAdd.xaml.cs">
+      <DependentUpon>ReciveRecordAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceManage\ReciveRecordMain.xaml.cs">
+      <DependentUpon>ReciveRecordMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceManage\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualSimulation\test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VisualSimulation\Guage.xaml.cs">
       <DependentUpon>Guage.xaml</DependentUpon>
     </Compile>
@@ -197,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="BasicInfo\MaterielSelect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ProduceManage\ProduceMange.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -230,6 +252,26 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="BasicInfo\BridgeCraneMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProduceManage\ProductionOderSelect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProduceManage\ReciveRecordAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProduceManage\ReciveRecordMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProduceManage\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualSimulation\test.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

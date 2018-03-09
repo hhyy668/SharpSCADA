@@ -852,7 +852,7 @@ namespace OPCDriver
         private int _shutDownCookie;
 
         public OPCReader(IDataServer dataServer, short id, string name, string serverIP = null,
-            int timeout = 0, string clsidOPCserver = "{6E6170F0-FF2D-11D2-8087-00105AA8F840}", string spare2 = null)
+            int timeout = 0, string clsidOPCserver = "{6E6170F0-FF2D-11D2-8087-00105AA8F840}", string spare2 = null)//{6E6170F0-FF2D-11D2-8087-00105AA8F840}
         {
             this._id = id;
             this._dataServer = dataServer;

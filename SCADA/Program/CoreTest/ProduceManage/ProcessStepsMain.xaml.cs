@@ -122,7 +122,7 @@ namespace CoreTest
             ProcessSteps processsteps = ProcessStepsList.SelectedItem as ProcessSteps;
             if (processsteps == null)
             {
-                MessageBox.Show("请选择要删除的行");
+                MessageBox.Show("请选择要修改的行");
                 return;
             }
             _processstepsForm.processsteps = processsteps;

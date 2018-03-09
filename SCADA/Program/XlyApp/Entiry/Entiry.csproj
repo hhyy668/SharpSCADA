@@ -73,6 +73,7 @@
     <Compile Include="ProductionOder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Racks.cs" />
+    <Compile Include="ReciveRecord.cs" />
     <Compile Include="Station.cs" />
   </ItemGroup>
   <ItemGroup>

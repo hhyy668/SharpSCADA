@@ -19,11 +19,17 @@ namespace Easy4net.Entity
 		/// 物料类型
         /// </summary>		
 		[Column(Name = "MaterielType")]
-        public string MaterielType { get; set;}       
-		/// <summary>
-		/// 规格
+        public string MaterielType { get; set;}
+        /// <summary>
+		/// 工位类型
         /// </summary>		
-		[Column(Name = "Spec")]
+		[Column(Name = "StationType")]
+        public int StationType { get; set; }
+        
+        /// <summary>
+        /// 规格
+        /// </summary>		
+        [Column(Name = "Spec")]
         public string Spec { get; set;}       
 		/// <summary>
 		/// 描述

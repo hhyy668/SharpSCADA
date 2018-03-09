@@ -122,7 +122,7 @@ namespace CoreTest
             Materiel materiel = MaterielList.SelectedItem as Materiel;
             if (materiel == null)
             {
-                MessageBox.Show("请选择要删除的行");
+                MessageBox.Show("请选择要修改的行");
                 return;
             }
             _materielForm.materiel = materiel;

@@ -98,7 +98,7 @@ namespace CoreTest
             Station station = StationList.SelectedItem as Station;
             if (station == null)
             {
-                MessageBox.Show("请选择要删除的行");
+                MessageBox.Show("请选择要修改的行");
                 return;
             }
             _stationForm.station = station;

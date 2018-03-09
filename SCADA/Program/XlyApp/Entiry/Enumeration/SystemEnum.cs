@@ -13,9 +13,12 @@ namespace Easy4net.Entity
     {
         [Description("未设置", true)]
         None = 0,
-        [Description("工程")]
-        GC = 1
-
+        [Description("进料单")]
+        RR = 1,
+        [Description("生产订单")]
+        PR = 2,
+        [Description("任务单")]
+        JO = 3
     }
     /// <summary>
     /// 前置单据类型
@@ -58,5 +61,14 @@ namespace Easy4net.Entity
         Add = 1,
         [Description("修改")]
         Modify = 2,
+    }
+    public enum StationTypeEnum
+    {
+        [Description("未设置", true)]
+        None = 0,
+        [Description("中间")]
+        Middle = 1,
+        [Description("侧边")]
+        Side = 2,
     }
 }

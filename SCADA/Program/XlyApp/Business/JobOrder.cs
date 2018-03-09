@@ -30,7 +30,7 @@ namespace Business
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
-		public bool Exists(int JobOrderID)
+		public bool Exists(string JobOrderID)
 		{
 			JobOrder model = dbhelper.Get<JobOrder>(JobOrderID);
 			 if (model != null)
@@ -59,7 +59,7 @@ namespace Business
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(int JobOrderID)
+		public bool Delete(string JobOrderID)
 		{
 			 return dbhelper.Remove<JobOrder>(JobOrderID)>0;
 		}
@@ -82,7 +82,7 @@ namespace Business
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public JobOrder GetModel(int JobOrderID)
+		public JobOrder GetModel(string JobOrderID)
 		{
 			  return dbhelper.Get<JobOrder>(JobOrderID);
 		}
@@ -90,7 +90,7 @@ namespace Business
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public JobOrder GetModelByCache(int JobOrderID)
+		public JobOrder GetModelByCache(string JobOrderID)
 		{
 			
 			string CacheKey = "JobOrderModel-" + JobOrderID;

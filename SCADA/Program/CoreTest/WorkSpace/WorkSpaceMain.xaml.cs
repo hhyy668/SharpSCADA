@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace CoreTest
 {
@@ -27,6 +28,7 @@ namespace CoreTest
         JobOrderBLL joborderBll = Engine.GetProvider<JobOrderBLL>();
         //ProcessStepsBLL processStepsBll = Engine.GetProvider<ProcessStepsBLL>();
         protected List<JobOrderExt> dataList = new List<JobOrderExt>();
+        DispatcherTimer timer;
 
         public WorkSpaceMain()
         {
@@ -36,38 +38,56 @@ namespace CoreTest
         {
             Init();
             Lst.ItemsSource = dataList;
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(10000);
+            timer.Tick += new EventHandler(JobOrderProcess);
+            timer.Start();
         }
-
-
-        private void AddJobOrder()
+        /// <summary>
+        /// Timer触发的事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void JobOrderProcess(object sender, EventArgs e)
         {
-            int num = 6;
-            CheckBox[] check = new CheckBox[num];
-            Thickness th = new Thickness();
-            th.Bottom = 10;
-            th.Left = 10;
-            th.Right = 10;
-            th.Top = 10;
-            for (int i = 0; i < check.Length; i++)
-            {
-                check[i] = new CheckBox();
-                //设置checkbox属性
-                check[i].Margin = th;
-                check[i].Content = i + 1;
+            timer.Stop();
+            foreach (JobOrderExt item in dataList) {
+                ProcessSteps step = item.ProcessSteps.Where(a => a.Statue == (int)JobOrderStatusEnum.Executing).FirstOrDefault();
+                if (step.EntTime.Subtract(step.StartTime).TotalMinutes > step.LengthOfStay) {
+                    MessageBox.Show("订单" + step.JobOrderID + "步骤" + step.StepName + "需从位置" + step.StationID+"取出");
+                    if (item.ProcessSteps.Where(a => a.StepNumber == step.StepNumber + 1).Count()>0){
+                        ProcessSteps nextstep = item.ProcessSteps.Where(a => a.StepNumber == step.StepNumber + 1).FirstOrDefault();
+                        //寻找空闲行车，优先使用进料航测
+                        //航测移动方法（目的地step.stationid）
+                        //航测吊起挂具方法（）//更新step.EntTime=now、step.Statue=已完成
+                        //航测移动方法（目的地nextstep.ProcessingPoolType，nextstep.StationType）
+                        //{
+                        //     查找符合条件的目的工位id
+                        //     航测移动至目的工位id
+                        // }
+                        //航测放下挂具方法（）//更新nextstep.startTime=now、step.Statue=执行中
+                    }else
+                    {
+                        MessageBox.Show("目前是最后一步！");
+                    }
+                }
 
-                //this.AddJobOrderBlock.Children.Add(check[i]);
             }
-        }
 
+            timer.Start();
+        }
 
         protected class JobOrderExt: JobOrder
         {
             ProcessStepsBLL processStepsBll = Engine.GetProvider<ProcessStepsBLL>();
             ProductionOderBLL productionoderBll = Engine.GetProvider<ProductionOderBLL>();
+            ReciveRecordBLL reciverecordBll = Engine.GetProvider<ReciveRecordBLL>();
+            RacksBLL racksBll = Engine.GetProvider<RacksBLL>();
             public JobOrderExt(JobOrder job)
             {
                 this.JobOrderID = job.JobOrderID;
-                this.JobOrderCode = job.JobOrderCode;
+                this.ReciveRecordID = job.ReciveRecordID;
+                this.RacksID = job.RacksID;
                 this.ProductionOderID = job.ProductionOderID;
                 this.Status = job.Status;
                 this.StartTime = job.StartTime;
@@ -82,7 +102,7 @@ namespace CoreTest
             {
                 get
                 {
-                    return processStepsBll.GetModelList(string.Format("JobOrderID={0}",this.JobOrderID));
+                    return processStepsBll.GetModelList(string.Format("JobOrderID='{0}'",this.JobOrderID));
                 }
             }
             public ProductionOder ProductionOrder
@@ -92,7 +112,22 @@ namespace CoreTest
                     return productionoderBll.GetModel(this.ProductionOderID);
                 }
             }
+            public ReciveRecord ReciveRecord
+            {
+                get
+                {
+                    return reciverecordBll.GetModel(this.ReciveRecordID);
+                }
+            }
+            public Racks Racks
+            {
+                get
+                {
+                    return racksBll.GetModel(this.RacksID.ToInt());
+                }
+            }
         }
+
         void Init()
         {
             List<JobOrder> list = joborderBll.GetModelList(string.Format("Status={0}", (int)JobOrderStatusEnum.Executing));
@@ -110,6 +145,8 @@ namespace CoreTest
             JobOrderAdd _joborderForm = new JobOrderAdd();
             _joborderForm.EditMode = EditModeEnum.Add;
             _joborderForm.ShowDialog();
+            Init();
+            Lst.ItemsSource = dataList;
         }
         
         private void Button_MouseDoubleClick(object sender, RoutedEventArgs e)

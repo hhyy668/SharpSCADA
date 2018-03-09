@@ -4,7 +4,8 @@
         Title="生产管理" Height="600" Width="900">
     <DockPanel Width="Auto" Height="Auto" LastChildFill="True">
         <StackPanel Width="130" Height="Auto" Background="Gray" DockPanel.Dock="Left">
-            <Button Margin="5" Name="btnProductionOrder" Width="Auto" Height="30" Content="生产订单管理" Click="btnProductionOrder_Click"/>
+            <Button Margin="5" Name="btnProductionOrder" Width="Auto" Height="30" Content="订单管理" Click="btnProductionOrder_Click"/>
+            <Button Margin="5" Name="btnReciveRecord" Width="Auto" Height="30" Content="进料管理" Click="btnReciveRecord_Click"/>
             <Button Margin="5" Name="btnJobOrder" Width="Auto" Height="30" Content="任务单管理" Click="btnJobOrder_Click"/>
             <Button Margin="5" Name="btnProcessSteps" Width="Auto" Height="30" Content="加工步骤管理" Click="btnProcessSteps_Click"/>
         </StackPanel>

@@ -47,11 +47,17 @@ namespace Business
 		{
 			return dbhelper.Save<ProcessSteps>(model)>0;		
 		}
-
-		/// <summary>
-		/// 更新一条数据
-		/// </summary>
-		public bool Update(ProcessSteps model)
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        public bool Add(List<ProcessSteps> modellist)
+        {
+            return dbhelper.Save<ProcessSteps>(modellist) > 0;
+        }
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        public bool Update(ProcessSteps model)
 		{
 			return dbhelper.Update<ProcessSteps>(model) > 0;
 		}

@@ -29,14 +29,16 @@ namespace CoreTest
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //cmbPoolType.ItemsSource = AttributesHelper.GetEnumValueDesc<PoolTypeEnum>();
-            //cmbPoolType.SelectedValuePath = "key";
-            //cmbPoolType.DisplayMemberPath = "Value";
+            cmbStationType.ItemsSource = AttributesHelper.GetEnumValueDesc<StationTypeEnum>();
+            cmbStationType.SelectedValuePath = "key";
+            cmbStationType.DisplayMemberPath = "Value";
             if (EditMode == EditModeEnum.Modify && materiel != null)
             {
-                //cmbPoolType.SelectedIndex = AttributesHelper.GetEnumKeyByDescription<PoolTypeEnum>(pool.PoolType).ToInt();               
-                this.txtMaterielID.Text = materiel.MaterielID.ToString();
+                KeyValuePair<int, string> item = new KeyValuePair<int, string>(materiel.StationType,AttributesHelper.GetEnumDescription<StationTypeEnum>(materiel.StationType));
+                //dic.Add(item);
+                cmbStationType.SelectedItem = item;
                 this.txtMaterielType.Text = materiel.MaterielType;
+                //this.txtStationType.Text = materiel.StationType.ToString();
                 this.txtSpec.Text = materiel.Spec;
                 this.txtDepict.Text = materiel.Depict;
                 this.txtSkim.Text = materiel.Skim.ToString();
@@ -56,9 +58,8 @@ namespace CoreTest
         {
             if (EditMode == EditModeEnum.Modify && materiel != null)
             {
-
-                materiel.MaterielID = this.txtMaterielID.Text.Trim().ToInt();
                 materiel.MaterielType = this.txtMaterielType.Text.Trim();
+                materiel.StationType = AttributesHelper.GetEnumKeyByDescription<PoolTypeEnum>(this.cmbStationType.Text).ToInt();
                 materiel.Spec = this.txtSpec.Text.Trim();
                 materiel.Depict = this.txtDepict.Text.Trim();
                 materiel.Skim = this.txtSkim.Text.Trim().ToInt();
@@ -77,8 +78,8 @@ namespace CoreTest
             else
             {
                 Materiel model = new Materiel();
-                model.MaterielID = txtMaterielID.Text.Trim().ToInt();
                 model.MaterielType = txtMaterielType.Text.Trim();
+                model.StationType = AttributesHelper.GetEnumKeyByDescription<PoolTypeEnum>(this.cmbStationType.Text).ToInt();
                 model.Spec = txtSpec.Text.Trim();
                 model.Depict = txtDepict.Text.Trim();
                 model.Skim = txtSkim.Text.Trim().ToInt();
